@@ -1,11 +1,14 @@
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #030f1f;
+  --font-size-small: 0.8rem;
+  --font-size-normal: 1rem;
+  --font-size-large: 1.2rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #030f1f;
     --foreground: #ededed;
   }
 }
@@ -19,9 +22,9 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 1rem 3rem;
 }
 
 * {
@@ -39,4 +42,12 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 2rem;
 }
