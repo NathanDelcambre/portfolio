@@ -1,0 +1,248 @@
+.aboutMePage {
+    width: 100%;
+    padding: 2rem 0;
+}
+
+.presentation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 60vh;
+    gap: 4rem;
+}
+
+/* Bloc photo */
+.profilePicture {
+    flex: 3;
+    display: flex;
+    justify-content: flex-end;
+    filter: drop-shadow(0px 0px 15px rgba(255, 255, 255, 0.22));
+}
+
+.profilePictureContainer {
+    clip-path: polygon(30% 14%, 71% 14%, 95% 33%, 95% 63%, 70% 82%, 29% 82%, 4% 63%, 4% 31%);
+}
+
+.profileImg {
+    display: block;
+    width: 400px;
+    height: auto;
+}
+
+/* Bloc infos */
+.generalInfos {
+    flex: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.role {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #999;
+    letter-spacing: 2px;
+}
+
+.name {
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.location {
+    font-size: 1.5rem;
+    color: var(--color-gray);
+}
+
+.buttons {
+    margin-top: 1.5rem;
+    display: flex;
+    gap: 1rem;
+    filter: drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.22));
+}
+
+.primaryBtn, .secondaryBtn {
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 6px;
+    background: var(--color-dark-gray);
+    color: var(--color-text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.primaryBtn:hover, .secondaryBtn:hover {
+    background: var(--color-gray);
+}
+
+.experiences, .formations, .interests {
+    margin-top: 4rem;
+    padding: 2rem 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.experiences h2, .formations h2, .interests h2 {
+    text-decoration: underline var(--color-secondary);
+    text-underline-offset: 10px;
+}
+
+.formations {
+    margin-bottom: 3rem;
+}
+
+.sectionTitle {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.experience {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.experienceHeader {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: baseline;
+    font-size: 1.1rem;
+}
+
+.experienceHeader h3 {
+    margin: 0;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.dates, .subject {
+    margin-left: auto;
+}
+
+.secondaryText, .dates, .subject {
+    font-size: 1.1rem;
+    color: var(--color-gray);
+    font-style: italic;
+}
+
+.experienceList {
+    list-style: disc inside;
+    margin: 0;
+    padding-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.experienceList li {
+    line-height: 2;
+    margin-top: 2vh;
+    margin-bottom: 2vh;
+    text-align: justify;
+}
+
+.experienceList li::marker {
+    color: var(--color-secondary);
+}
+
+.separationLine {
+    width: 50%;
+    margin-left: 25%;
+    height: 1px;
+    border-color: var(--color-primary);
+}
+
+.cardsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    background: var(--background);
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0px 0px 25px rgba(255, 255, 255, 0.22));
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.cardImage {
+    flex: 6;
+    width: 100%;
+    height: 250px;
+}
+
+.cardImage img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.cardContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.6rem;
+    align-items: center;
+    padding: 1.2rem;
+    background: var(--background);
+    font-weight: 500;
+    text-align: center;
+}
+
+.diplomas {
+    margin-top: 4rem;
+    padding: 2rem;
+    text-align: center;
+}
+
+.diplomasGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+
+.diploma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.diploma img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+}
+
+.diploma p {
+    font-size: 1.0rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+img.white {
+    filter: brightness(0) invert(1);
+}

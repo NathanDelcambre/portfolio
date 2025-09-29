@@ -1,0 +1,23 @@
+:root {
+    /* Colors */
+    --color-background: #ffffff;
+    --color-foreground: #010810;
+    --color-text-primary: #ffffff;
+    --color-primary: #102b3d;
+    --color-secondary: #a1e6ff;
+    --color-light-gray: #999;
+    --color-gray: #666;
+    --color-dark-gray: #333;
+
+    /* Font sizes */
+    --font-size-small: 0.6rem;
+    --font-size-normal: 0.8rem;
+    --font-size-large: 1rem;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --color-background: #010810;
+        --color-foreground: #ededed;
+    }
+}
