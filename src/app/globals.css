@@ -1,14 +1,16 @@
+@import "./variables.css";
+
 :root {
   --background: #ffffff;
-  --foreground: #030f1f;
-  --font-size-small: 0.8rem;
-  --font-size-normal: 1rem;
-  --font-size-large: 1.2rem;
+  --foreground: #010810;
+  --font-size-small: 0.6rem;
+  --font-size-normal: 0.8rem;
+  --font-size-large: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #030f1f;
+    --background: #010810;
     --foreground: #ededed;
   }
 }
@@ -24,7 +26,6 @@ body {
   background: var(--background);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 1rem 3rem;
 }
 
 * {
