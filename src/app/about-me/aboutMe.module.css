@@ -73,7 +73,7 @@
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
-    filter: drop-shadow(0 0 25px rgba(255,255,255,0.32));
+    filter: drop-shadow(0 0 5px rgba(255,255,255,0.32));
 }
 
 /* base commune */
@@ -92,26 +92,60 @@
 .primaryBtn:hover,
 .secondaryBtn:hover { background: var(--color-gray); }
 
+.primaryBtn p,
+.secondaryBtn p{
+    background: linear-gradient(to right, #ffffff 0%, #72baf1 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+
 /* ---------- Sections (exp, formations, interests) ---------- */
 .experiences,
-.formations,
+.formations, .otherDiplomas,
 .interests {
     display: flex;
     flex-direction: column;
     gap: 3rem;
     padding: 2rem 10rem;
+    margin-top: 8rem;
+}
+
+.experiences {
     margin-top: 4rem;
 }
-.formations { margin-bottom: 3rem; }
 
 .experiences h2,
-.formations h2,
+.formations h2, .otherDiplomas h2,
 .interests h2 {
-    text-decoration: underline var(--color-secondary);
-    text-underline-offset: 10px;
+    display: inline-block;
+    background: linear-gradient(to right, #ffffff 40%, #4d9dda 55%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-align: center;
 }
 
-.sectionTitle { font-size: 1.8rem; font-weight: 700; margin-bottom: 1rem; }
+.experiences .heading h3,
+.formations .heading h3, .otherDiplomas .heading h3,
+.interests .heading h3 {
+    color: gray;
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.heading {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3rem;
+    gap: 1.5rem;
+}
+
 
 /* ---------- Expériences ---------- */
 .experience {
@@ -156,8 +190,8 @@
 
 .experienceGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(25vw, 1fr));
-    gap: 4rem 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem 2rem;
     margin-top: 1rem;
     padding-bottom: 2rem;
 }
@@ -168,25 +202,26 @@
     align-items: center;
     gap: 1rem;
     padding: 3rem 2rem;
-    border: 1px solid #3075c4;
+    margin: .3rem;
     border-radius: 16px;
-    background-image: linear-gradient(to top, #0b3650 0%, #030f26 100%);
-    box-shadow: 0 0 15px rgba(255,255,255,.15);
+    background-image: linear-gradient(to top, #072941 0%, #0c3048 20%, #00050e 100%);
+    box-shadow: 0 0 5px rgba(255,255,255,.25);
 }
 
 .subject {
-    background: #1e445d;
+    background-image: linear-gradient(to top, #0a2a3f 0%, #103854 100%);
     padding: 10px 15px;
     border-radius: 15px;
     color: #fff;
     font-weight: 600;
+    box-shadow: 2px 2px 8px rgba(255,255,255,.1);
 }
 
 .workDone {
     list-style: disc inside;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
     gap: 2vh;
     padding-left: 1rem;
     margin-top: 1rem;
@@ -209,7 +244,6 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 2rem;
     place-items: center;
-    margin: 2rem 0;
 }
 .diploma { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
 .diploma img { width: 120px; height: 120px; object-fit: contain; }
@@ -217,14 +251,8 @@
 .diploma .white { filter: brightness(0) invert(1); }
 
 .formations img,
-.interests img { filter: brightness(1) contrast(1) saturate(.8); }
+.interests img { filter: brightness(1) contrast(0.8) saturate(0.8); }
 
-.separationLine {
-    width: 50%;
-    margin-left: 25%;
-    height: 1px;
-    border-color: #484848;
-}
 
 /* ---------- Carousel ---------- */
 .carouselViewport { margin-bottom: 8rem; }

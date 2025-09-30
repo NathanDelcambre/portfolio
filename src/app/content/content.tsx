@@ -4,7 +4,7 @@ export const hero: Hero = {
     role: "SOFTWARE ENGINEER",
     name: "Nathan DELCAMBRE",
     location: "Nantes, Loire-Atlantique (44)",
-    ctaPrimary: "Download CV",
+    ctaPrimary: "See my Resume",
     ctaSecondary: "Contact Me",
 };
 
@@ -53,7 +53,7 @@ export const experiences: Experience[] = [
                 heading: "🐢 DUT INTERNSHIP",
                 items: [
                     "Android application development training in Android Studio (TV-style UI).",
-                    "Benchmarked item rails (including Jetpack Compose) with Espresso and JUnit. RecyclerView selected for its foundational role.",
+                    "Benchmarked item rails (including Jetpack Compose) with Espresso and JUnit. Study about LazyRow, containerization, RecyclerView.",
                     "Wrote a final report and dissertation."
                 ],
             },
@@ -71,7 +71,7 @@ export const formations: Formation[] = [
     },
     {
         dates: "2020 – 2022",
-        school: "IUT d'Anglet",
+        school: "IUT des Pays de l'Adour",
         diploma: "DUT Informatique",
         imageSrc: "/images/iut.jpg",
         imageAlt: "IUT Informatique",
