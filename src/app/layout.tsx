@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import React from "react";
 import { Outfit } from 'next/font/google';
-import Navigation from "@/app/components/navBar/Navigation";
+import Navigation from "@/app/components/navBar/navBar";
 import styles from "@/app/page.module.css";
 
 const outfit = Outfit({
@@ -26,7 +26,24 @@ export default function RootLayout({
     <header className={styles.header}>
       <Navigation/>
     </header>
-    <main>{children}</main>
+    <main>
+      {children}
+    </main>
+    <footer className={styles.footer}>
+      <div className={styles.footerContent}>
+        <p>© 2025 Nathan Delcambre. All rights reserved.</p>
+        <nav>
+          <a href="/">Home</a>
+          <a href="/about-me">About</a>
+          <a href="/projects">Projects</a>
+          <a href="/contact">Contact</a>
+        </nav>
+        <div className={styles.socials}>
+          <a href="https://github.com/NathanDelcambre" target="_blank">GitHub</a>
+          <a href="https://www.linkedin.com/in/nathan-delcambre/" target="_blank">LinkedIn</a>
+        </div>
+      </div>
+    </footer>
     </body>
     </html>
   );
