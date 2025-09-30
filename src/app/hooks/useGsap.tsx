@@ -41,6 +41,7 @@ export function useAboutGsap() {
                         scrollTrigger: {
                             trigger: el,
                             start: "top 85%",
+                            toggleActions: "play none none reverse",
                         },
                     });
                 });
@@ -83,6 +84,7 @@ export function useAboutGsap() {
                         scrollTrigger: {
                             trigger: grid,
                             start: "top 80%",
+                            toggleActions: "restart none none reverse",
                         },
                     });
                 });

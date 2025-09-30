@@ -31,14 +31,12 @@ export default function Card({
             <div className={styles.cardImage}>
                 <Image src={imageSrc} alt={imageAlt} width={1200} height={800} />
 
-                {/* Date en haut à gauche */}
                 {meta && (
                     <div className={styles.topLeft}>
                         <span className={styles.chip}>{meta}</span>
                     </div>
                 )}
 
-                {/* Autres chips en bas à gauche */}
                 <div className={styles.bottomLeft}>
                     {title && <span className={styles.chip}>{title}</span>}
                     {subtitle && <span className={styles.chip}>{subtitle}</span>}

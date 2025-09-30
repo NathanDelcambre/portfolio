@@ -2,11 +2,11 @@
 import styles from "./aboutMe.module.css";
 import Image from "next/image";
 import Card from "../components/card/card";
-import { hero, experiences, formations, diplomas, interests } from "../content/aboutme/aboutmeContent";
-import { useAboutGsap } from "../hooks/useGsap";
+import {diplomas, experiences, formations, hero, interests} from "../content/content";
+import {useAboutGsap} from "../hooks/useGsap";
 import AutoCarousel from "../components/autoCarousel/autoCarousel";
-import { useRef, useState } from "react";
-import { useTilt } from "../hooks/useTilt";
+import {useRef, useState} from "react";
+import {useTilt} from "../hooks/useTilt";
 import Link from "next/link";
 
 export default function AboutMePage() {
@@ -14,7 +14,9 @@ export default function AboutMePage() {
     const [open, setOpen] = useState<Record<string, boolean>>({});
     const panelsRef = useRef<Record<string, HTMLDivElement | null>>({});
     const toggle = (key: string) => {
-        setOpen((s) => ({ ...s, [key]: !s[key] }));
+        setOpen((s) => {
+            return {...s, [key]: !s[key]};
+        });
     };
     const tilt = useTilt(30);
 
@@ -23,7 +25,7 @@ export default function AboutMePage() {
             {/* Hero */}
             <section className={styles.presentation}>
                 <div className={styles.profilePicture}>
-                    <div className={styles.profilePictureContainer } ref={tilt.ref}
+                    <div className={styles.profilePictureContainer} ref={tilt.ref}
                          onMouseMove={tilt.handleMouseMove}
                          onMouseLeave={tilt.handleMouseLeave}>
                         <Image
@@ -42,20 +44,23 @@ export default function AboutMePage() {
                     <p className={styles.location}>{hero.location}</p>
                     <div className={styles.buttons} data-anim={"hero-ctas"}>
                         <button className={styles.primaryBtn}>
-                            <a href={"/pdf/Curriculum-Vitae_Nathan-DELCAMBRE.pdf"} download>
-                                {hero.ctaPrimary}
+                            <a href={"/pdf/Curriculum-Vitae_Nathan-DELCAMBRE.pdf"} target="CV - Nathan Delcambre"
+                               rel="noopener noreferrer">
+                                <p>{hero.ctaPrimary}</p>
                             </a>
                         </button>
-                        <button className={styles.secondaryBtn}><Link href="/contact">{hero.ctaSecondary}</Link></button>
+                        <button className={styles.secondaryBtn}><Link href="/contact"><p>{hero.ctaSecondary}</p></Link>
+                        </button>
                     </div>
                 </div>
             </section>
 
             {/* Experiences */}
             <section className={styles.experiences} data-anim={"exp"}>
-                <h2 className={styles.sectionTitle} data-anim={"title"}>
-                    Experiences
-                </h2>
+                <div className={styles.heading}>
+                    <h2 className={styles.sectionTitle} data-anim={"title"}>Experiences</h2>
+                    <h3 data-anim={"title"}>Discover the milestones that shaped my professional journey</h3>
+                </div>
 
                 {experiences.map((exp) => {
                     const key = `${exp.role}-${exp.dates}`;
@@ -72,18 +77,19 @@ export default function AboutMePage() {
                                 aria-controls={`panel-${key}`}
                                 onClick={() => toggle(key)}
                             >
-                            <h3>{exp.role}</h3>
-                            <span className={styles.dates}>({exp.dates})</span>
+                                <h3>{exp.role}</h3>
+                                <span className={styles.dates}>({exp.dates})</span>
                                 <span className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} aria-hidden>
                                     <svg width="20" height="20" viewBox="0 0 24 24" className={styles.chevronIcon}>
-                                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round"/>
+                                        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" strokeWidth="4"
+                                              strokeLinecap="round" strokeLinejoin="round"/>
                                     </svg>
                                 </span>
                             </button>
                             <div
                                 id={`panel-${key}`}
                                 className={styles.experiencePanel}
-                                style={{ maxHeight }}
+                                style={{maxHeight}}
                             >
                                 <div
                                     className={styles.experiencePanelInner}
@@ -115,9 +121,10 @@ export default function AboutMePage() {
 
             {/* Formations */}
             <section className={styles.formations} data-anim={"formations"}>
-                <h2 className={styles.sectionTitle} data-anim={"title"}>
-                    Formations
-                </h2>
+                <div className={styles.heading}>
+                    <h2 className={styles.sectionTitle} data-anim={"title"}>Formations</h2>
+                    <h3 data-anim={"title"}>The foundations that built my knowledge and skills</h3>
+                </div>
                 <div className={styles.cardsGrid} data-anim={"cards"}>
                     {formations.map((f) => (
                         <Card
@@ -130,12 +137,19 @@ export default function AboutMePage() {
                         />
                     ))}
                 </div>
+            </section>
 
-                <h2 className={styles.normalText}>Other diplomas</h2>
+            {/* Other diplomas*/}
+            <section className={styles.otherDiplomas} data-anim={"formations"}>
+                <div className={styles.heading}>
+                    <h2 data-anim={"title"}>Other diplomas</h2>
+                    <h3 data-anim={"title"}>Completing my profile with language certifications</h3>
+                </div>
+
                 <div className={styles.diplomasGrid} data-anim={"diplomas"}>
                     {diplomas.map((d) => (
                         <div className={styles.diploma} key={d.name} data-anim={"diploma"}>
-                            <img className={styles.white} src={d.imageSrc} alt={d.imageAlt} />
+                            <img className={styles.white} src={d.imageSrc} alt={d.imageAlt}/>
                             <p>{d.name}</p>
                             {d.subtitle && (
                                 <p className={styles.secondaryText}>{d.subtitle}</p>
@@ -145,13 +159,13 @@ export default function AboutMePage() {
                 </div>
             </section>
 
-            <hr className={styles.separationLine} />
-
             {/* Interests */}
             <section className={styles.interests} data-anim={"interests"}>
-                <h2 className={styles.sectionTitle} data-anim={"title"}>
-                    Interests
-                </h2>
+                <div className={styles.heading}>
+                    <h2 data-anim={"title"}>Interests</h2>
+                    <h3 data-anim={"title"}>Take a look at what inspires me beyond work</h3>
+                </div>
+
                 <AutoCarousel speed={60} gap={24} className={styles.carouselViewport}>
                     {interests.map((it) => (
                         <Image
