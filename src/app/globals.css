@@ -3,14 +3,14 @@
 :root {
   --background: #ffffff;
   --foreground: #010810;
-  --font-size-small: 0.6rem;
-  --font-size-normal: 0.8rem;
-  --font-size-large: 1rem;
+  --font-size-small: 1rem;
+  --font-size-normal: 1.2rem;
+  --font-size-large: 1.4rem;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #010810;
+    --background: #000205;
     --foreground: #ededed;
   }
 }
@@ -50,5 +50,16 @@ main {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  padding: 2rem;
+  padding: 2rem 8rem;
+}
+
+
+@media (max-width: 696px) {
+  body {
+    text-align: center;
+  }
+
+  main, section {
+    padding: 2rem !important;
+  }
 }

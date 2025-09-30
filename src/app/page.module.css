@@ -7,3 +7,27 @@
 
   }
 }
+
+
+.footer {
+  padding: 2rem;
+  background: var(--color-background);
+  border-top: 1px solid var(--color-gray);
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+.footer nav {
+  margin: 1rem 0;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  color: var(--color-secondary);
+}
+
+.footer .socials {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
