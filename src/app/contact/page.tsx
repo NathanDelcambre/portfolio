@@ -103,7 +103,7 @@ export default function ContactPage() {
                     <div className={styles.linksGrid} data-anim={"cards"}>
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/phone.png" alt="telephone" width={64} height={64}
+                                <Image src="/images/links/phone.png" alt="telephone" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <p>07 50 82 77 52</p>
@@ -111,7 +111,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/gmail.png" alt="gmail" width={64} height={64}
+                                <Image src="/images/links/gmail.png" alt="gmail" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/linkedIn.png" alt="linkedIn" width={64} height={64}
+                                <Image src="/images/links/linkedIn.png" alt="linkedIn" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <Link href="https://www.linkedin.com/in/nathan-delcambre/" target="_blank"
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/github.png" alt="github" width={64} height={64}
+                                <Image src="/images/links/github.png" alt="github" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <Link href="https://github.com/NathanDelcambre" target="_blank"

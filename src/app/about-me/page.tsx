@@ -2,12 +2,13 @@
 import styles from "./aboutMe.module.css";
 import Image from "next/image";
 import Card from "../components/card/card";
-import {diplomas, experiences, formations, hero, interests} from "../content/content";
+import {diplomas, experiences, formations, hero, interests, skills} from "../content/content";
 import {useAboutGsap} from "../hooks/useGsap";
 import AutoCarousel from "../components/autoCarousel/autoCarousel";
 import {useRef, useState} from "react";
 import {useTilt} from "../hooks/useTilt";
 import Link from "next/link";
+import ScrollCue from "@/app/components/scrollCue/scrollCue";
 
 export default function AboutMePage() {
     const scope = useAboutGsap();
@@ -54,6 +55,8 @@ export default function AboutMePage() {
                     </div>
                 </div>
             </section>
+
+            <ScrollCue />
 
             {/* Experiences */}
             <section className={styles.experiences} data-anim={"exp"}>
@@ -103,6 +106,11 @@ export default function AboutMePage() {
                                                 {block.heading && (
                                                     <code className={styles.subject}>{block.heading}</code>
                                                 )}
+                                                <div className={styles.tagList}>
+                                                    {block.tags?.map((tag, j) => (
+                                                        <div className={styles.tagChip} key={j}>{tag}</div>
+                                                    ))}
+                                                </div>
                                                 <ul className={styles.workDone}>
                                                     {block.items.map((item, j) => (
                                                         <li key={j}>{item}</li>
@@ -118,6 +126,22 @@ export default function AboutMePage() {
                 })}
             </section>
 
+            {/* Skills */}
+            <section className={styles.skills} data-anim={"skills"}>
+                <div className={styles.heading}>
+                    <h2 data-anim={"title"}>Skills</h2>
+                    <h3 data-anim={"title"}>The different technologies and frameworks</h3>
+                </div>
+
+                <div className={styles.skillsGrid} data-anim={"skills"}>
+                    {skills.map((s) => (
+                        <div className={styles.skill} key={s.name} data-anim={"skill"}>
+                            <Image className={styles.white} src={s.imageSrc} alt={s.imageAlt} width={80} height={80}/>
+                            <p>{s.name}</p>
+                        </div>
+                    ))}
+                </div>
+            </section>
 
             {/* Formations */}
             <section className={styles.formations} data-anim={"formations"}>
@@ -139,10 +163,10 @@ export default function AboutMePage() {
                 </div>
             </section>
 
-            {/* Other diplomas*/}
+            {/* Certifications */}
             <section className={styles.otherDiplomas} data-anim={"formations"}>
                 <div className={styles.heading}>
-                    <h2 data-anim={"title"}>Other diplomas</h2>
+                    <h2 data-anim={"title"}>Certifications</h2>
                     <h3 data-anim={"title"}>Completing my profile with language certifications</h3>
                 </div>
 

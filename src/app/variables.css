@@ -2,22 +2,50 @@
     /* Colors */
     --color-background: #ffffff;
     --color-foreground: #010810;
-    --color-text-primary: #ffffff;
+    --color-text-primary: #000000;
+    --color-text-secondary: #3a3a3a;
     --color-primary: #313131;
-    --color-secondary: #a1e6ff;
-    --color-light-gray: #999;
-    --color-gray: #666;
-    --color-dark-gray: #333;
+    --color-primary-accent: #efefef;
+    --color-secondary: #89dfff;
+    --color-secondary-accent: #4fb3ff;
+    --color-tertiary: #737373;
+    --color-dropShadow: rgba(75,75,75, 0.4);
+    --color-text-hovered: #000000;
+    --color-button-hovered: #c9c9c9;
+    --color-card-border: #efefef;
+    --color-button-border: #bdbdbd;
+    --color-input-border: rgb(0, 0, 0);
+    --color-card-background: rgba(178, 234, 255, 0.38);
+    --color-input-background: rgba(255, 255, 255, 0.88);
 
     /* Font sizes */
-    --font-size-small: 0.6rem;
-    --font-size-normal: 0.8rem;
-    --font-size-large: 1rem;
+    --font-size-small: 1rem;
+    --font-size-normal: 1.2rem;
+    --font-size-large: 1.4rem;
+
+    /* Diplomas logo */
+    --img-filter: brightness(0);
+    --img-opacity: 0.9;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #010810;
-        --color-foreground: #ededed;
-    }
+.dark {
+    --color-background: #010810;
+    --color-foreground: #ffffff;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cecece;
+    --color-primary: #313131;
+    --color-primary-accent: #09152c;
+    --color-secondary: #a1e6ff;
+    --color-tertiary: #737373;
+    --color-dropShadow: rgba(125,125,125, 0.4);
+    --color-text-hovered: #ffffff;
+    --color-button-hovered: #15334f;
+    --color-card-border: #15274d;
+    --color-button-border: rgba(255, 255, 255, 0);
+    --color-input-border: rgba(255, 255, 255, 0.32);
+    --color-card-background: #030e1c;
+    --color-input-background: rgba(0, 0, 0, 0.88);
+
+    --img-filter: brightness(0) invert(1);
+    --img-opacity: 1;
 }

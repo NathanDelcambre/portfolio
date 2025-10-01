@@ -1,5 +1,6 @@
 export type ExperienceBlock = {
     heading?: string;
+    tags?: string[];
     items: string[];
 };
 
@@ -37,4 +38,10 @@ export type Hero = {
     location: string;
     ctaPrimary: string;
     ctaSecondary: string;
+};
+
+export type Skill = {
+    name: string;
+    imageSrc: string;
+    imageAlt: string;
 };

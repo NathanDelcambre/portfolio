@@ -4,6 +4,7 @@ import React from "react";
 import { Outfit } from 'next/font/google';
 import Navigation from "@/app/components/navBar/navBar";
 import styles from "@/app/page.module.css";
+import ThemeToggle from "@/app/components/themeToggle/themeToggle";
 
 const outfit = Outfit({
   weight: "500",
@@ -44,6 +45,7 @@ export default function RootLayout({
         </div>
       </div>
     </footer>
+    <ThemeToggle />
     </body>
     </html>
   );

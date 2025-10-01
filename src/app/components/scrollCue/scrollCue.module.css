@@ -1,0 +1,40 @@
+.scrollCueFixed {
+    position: fixed;
+    left: 50%;
+    bottom: 10rem;
+    transform: translateX(-50%);
+    z-index: 9998;
+
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: .4rem;
+
+    padding: .5rem .75rem;
+    background: transparent;
+    color: var(--color-tertiary);
+    cursor: pointer;
+    border: none;
+
+    animation: floatY 1.8s ease-in-out infinite;
+    transition: opacity .2s ease, transform .15s ease;
+    will-change: transform, opacity;
+}
+
+.scrollCueFixed:hover {
+    transform: translateX(-50%) translateY(-2px);
+}
+
+.scrollText {
+    font-size: 1.2rem;
+    opacity: .8;
+}
+
+@keyframes floatY {
+    0%, 100% { transform: translateX(-50%) translateY(0); }
+    50%      { transform: translateX(-50%) translateY(-20px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .scrollCueFixed { animation: none; }
+}
