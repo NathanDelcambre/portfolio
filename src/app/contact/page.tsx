@@ -46,7 +46,7 @@ export default function ContactPage() {
             <section className={styles.contact}>
                 <div className={styles.heading}>
                     <h2 className={styles.sectionTitle} data-anim={"title"}>Contact</h2>
-                    <h3 className={styles.subtitle} ata-anim={"title"}>Do not hesitate to contact me, I will answer you if there are no
+                    <h3 className={styles.subtitle} data-anim={"title"}>Do not hesitate to contact me, I will answer you if there are no
                         waves to surf</h3>
                 </div>
 
