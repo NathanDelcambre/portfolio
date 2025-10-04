@@ -54,27 +54,27 @@ export default function ContactPage() {
                     <div className={styles.rowContainer}>
                         <div className={styles.row}>
                             <label htmlFor="firstName" className={styles.label}>First name</label>
-                            <input type="text" id="firstName" name="firstName" required className={styles.input}/>
+                            <input placeholder={"..."} type="text" id="firstName" name="firstName" required className={styles.input}/>
                         </div>
 
                         <div className={styles.row}>
                             <label htmlFor="lastName" className={styles.label}>Last name</label>
-                            <input type="text" id="lastName" name="lastName" required className={styles.input}/>
+                            <input placeholder={"..."} type="text" id="lastName" name="lastName" required className={styles.input}/>
                         </div>
 
                         <div className={styles.row}>
                             <label htmlFor="email" className={styles.label}>Email</label>
-                            <input type="email" id="email" name="email" required className={styles.input}/>
+                            <input placeholder={"..."} type="email" id="email" name="email" required className={styles.input}/>
                         </div>
 
                         <div className={styles.row}>
                             <label htmlFor="subject" className={styles.label}>Object</label>
-                            <input type="text" id="subject" name="subject" required className={styles.input}/>
+                            <input placeholder={"..."} type="text" id="subject" name="subject" required className={styles.input}/>
                         </div>
 
                         <div className={`${styles.row} ${styles.fullWidth}`}>
                             <label htmlFor="message" className={styles.label}>Message</label>
-                            <textarea id="message" name="message" rows={5} required className={styles.textarea}/>
+                            <textarea placeholder={""} id="message" name="message" rows={5} required className={styles.textarea}/>
                         </div>
                     </div>
 

@@ -32,16 +32,16 @@ export default function AboutMePage() {
                         <Image
                             src="/images/pp.jpg"
                             alt={`Photo de ${hero.name}`}
-                            width={400}
-                            height={400}
+                            width={1200}
+                            height={2000}
                             className={styles.profileImg}
                             priority
                         />
                     </div>
                 </div>
                 <div className={styles.generalInfos} data-anim={"hero-copy"}>
+                    <h1 className={`${styles.name} ${styles.typewriter}`}>{hero.name}</h1>
                     <p className={styles.role}>{hero.role}</p>
-                    <h1 className={styles.name}>{hero.name}</h1>
                     <p className={styles.location}>{hero.location}</p>
                     <div className={styles.buttons} data-anim={"hero-ctas"}>
                         <button className={styles.primaryBtn}>
@@ -80,7 +80,10 @@ export default function AboutMePage() {
                                 aria-controls={`panel-${key}`}
                                 onClick={() => toggle(key)}
                             >
-                                <h3>{exp.role}</h3>
+                                <h3 className={styles.expTitle}>
+                                    <span className={styles.waveMask} aria-hidden="true"></span>
+                                    {exp.company} - {exp.role}
+                                </h3>
                                 <span className={styles.dates}>({exp.dates})</span>
                                 <span className={`${styles.chevron} ${isOpen ? styles.chevronOpen : ""}`} aria-hidden>
                                     <svg width="20" height="20" viewBox="0 0 24 24" className={styles.chevronIcon}>
@@ -130,7 +133,7 @@ export default function AboutMePage() {
             <section className={styles.skills} data-anim={"skills"}>
                 <div className={styles.heading}>
                     <h2 data-anim={"title"}>Skills</h2>
-                    <h3 data-anim={"title"}>The different technologies and frameworks</h3>
+                    <h3 data-anim={"title"}>The different technologies and frameworks seen</h3>
                 </div>
 
                 <div className={styles.skillsGrid} data-anim={"skills"}>
@@ -172,7 +175,7 @@ export default function AboutMePage() {
 
                 <div className={styles.diplomasGrid} data-anim={"diplomas"}>
                     {diplomas.map((d) => (
-                        <div className={styles.diploma} key={d.name} data-anim={"diploma"}>
+                        <div className={styles.diploma} key={d.name} data-anim={"diploma"} title={d.tooltip}>
                             <img className={styles.white} src={d.imageSrc} alt={d.imageAlt}/>
                             <p>{d.name}</p>
                             {d.subtitle && (

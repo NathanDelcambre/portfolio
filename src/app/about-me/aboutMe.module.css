@@ -7,7 +7,9 @@
     width: 100%;
 }
 
-.aboutMePage {  }
+.aboutMePage {
+    margin-top: 7vh;
+}
 
 /* ---------- Hero ---------- */
 .presentation {
@@ -22,7 +24,7 @@
     flex: 3;
     display: flex;
     justify-content: flex-end;
-    filter: drop-shadow(0 0 25px var(--color-dropShadow));
+    filter: drop-shadow(0 0 55px var(--color-dropShadow));
     perspective: 1000px;
     perspective-origin: 50% 50%;
 }
@@ -37,7 +39,7 @@
 
 .profileImg {
     display: block;
-    width: 500px;
+    width: calc(200px + 17vw);
     height: auto;
 }
 
@@ -47,33 +49,37 @@
     flex-direction: column;
     justify-content: center;
     gap: 1rem;
+    align-items: flex-start;
 }
 
 .role,
-.location,
 .secondaryText,
 .subject,
-.normalText,
-.workDone li {
+.normalText {
     font-size: var(--font-size-normal);
 }
 
 .role {
-    font-size: 1.7rem;
+    font-size: var(--font-size-small);
     font-weight: 600;
-    color: #999;
+    color: #282828;
     letter-spacing: 2px;
+    padding: 10px 15px;
+    background-image: linear-gradient(to right, #c2e8ff, #79d0ff);
+    box-shadow: 0 0 15px var(--color-dropShadow-blue);
+    border-radius: var(--large-border-radius);
+    margin-bottom: 2vh;
 }
 
-.name { font-size: 5rem; font-weight: 700; }
-.location { color: var(--color-tertiary); }
+.name { font-size: var(--font-size-huge); font-weight: 700; }
+.location { font-size: var(--font-size-normal); color: var(--color-tertiary); }
 
 /* ---------- Boutons ---------- */
 .buttons {
     display: flex;
     gap: 1rem;
     margin-top: 1.5rem;
-    filter: drop-shadow(0 0 3px var(--color-dropShadow));
+    filter: drop-shadow(0 0 6px var(--color-dropShadow));
 }
 
 /* base commune */
@@ -81,7 +87,7 @@
 .secondaryBtn {
     padding: .7rem 1.5rem;
     border: 1px solid var(--color-button-border);
-    border-radius: 6px;
+    border-radius: var(--border-radius-small);
     background: var(--color-primary-accent);
     color: var(--color-text-primary);
     font-weight: 600;
@@ -94,11 +100,12 @@
 
 .primaryBtn p,
 .secondaryBtn p{
-    background: linear-gradient(to right, var(--color-foreground) 0%, var(--color-secondary-accent) 100%);
+    background: linear-gradient(to right, var(--color-focus) 0%, var(--color-secondary-accent) 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
+    font-size: var(--font-size-small)
 }
 
 /* ---------- Sections (exp, formations, interests) ---------- */
@@ -109,7 +116,7 @@
     flex-direction: column;
     gap: 3rem;
     padding: 2rem 10rem;
-    margin-top: 8rem;
+    margin-top: 6rem;
 }
 
 .experiences {
@@ -134,7 +141,7 @@
 .interests .heading h3, .skills .heading h3
 {
     color: var(--color-text-secondary);
-    font-size: 1.5rem;
+    font-size: var(--font-size-large);
     text-align: center;
 }
 
@@ -169,6 +176,21 @@
     color: inherit;
 }
 .experienceHeader h3 { margin: 0; font-size: var(--font-size-large); font-weight: 600; }
+
+.expTitle{
+    display:inline-flex;
+    align-items:center;
+    gap:.5ch;
+    line-height:1.2;
+}
+
+.waveMask{
+    width: 3em; height: 1em;
+    display: inline-block;
+    background: var(--color-secondary-accent);
+    mask: url("/images/skills/wave.svg") no-repeat center / contain;
+    vertical-align: middle;
+}
 
 .dates {
     margin-left: auto;
@@ -205,17 +227,23 @@
     margin: .3rem;
     border-radius: 16px;
     border: 1px solid var(--color-card-border);
-    background-image: linear-gradient(to top, var(--color-primary-accent) 0%,  var(--color-background) 50%);
+    background-color: var(--color-black-and-white);
+    transition: all 0.6s ease;
+}
+
+.experienceDescription:hover {
+    box-shadow: 0 0 5px var(--color-dropShadow-blue);
 }
 
 .subject {
-    background-color: var(--color-primary-accent);
+    background-color: var(--color-secondary-soft);
     padding: 10px 15px;
     border-radius: 15px;
     border: 1px solid var(--color-button-border);
     color: var(--color-foreground);
     font-weight: 600;
-    box-shadow: 0 0 4px var(--color-dropShadow);
+    box-shadow: 0 0 4px var(--color-dropShadow-blue);
+    font-size: var(--font-size-small);
 }
 
 .tagList {
@@ -227,12 +255,14 @@
 }
 
 .tagChip {
+    font-size: var(--font-size-tiny);
     text-align: center;
-    padding: 5px 10px;
+    padding: 4px 10px;
     border-radius: 15px;
+    border: 1px solid var(--color-chip-border);
     color: var(--color-primary);
     white-space: nowrap;
-    background-image: linear-gradient(to right, white 30%, var(--color-secondary-accent) 100%);
+    background-color: white;
 }
 
 .workDone {
@@ -241,10 +271,11 @@
     flex-direction: column;
     text-align: center;
     gap: 2vh;
+    font-size: var(--font-size-small);
     padding-left: 1rem;
     margin-top: 1rem;
 }
-.workDone li { line-height: 1.8; }
+.workDone li { line-height: 1.8; color: var(--color-text-secondary) }
 .workDone li::marker { color: var(--color-secondary); }
 
 /* ---------- Grids & cards ---------- */
@@ -261,10 +292,19 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-items: center;
+    gap: 2vw;
 }
-.diploma { display: flex; flex-direction: column; align-items: center; gap: .5rem; }
+.diploma {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: var(--border-radius-small);
+    box-shadow: 2px 2px 10px var(--color-dropShadow);
+    padding: 2vw 4vw;
+}
+
 .diploma img { width: 120px; height: 120px; object-fit: contain; }
-.diploma p { margin: 0; font-weight: 500; }
+.diploma p { margin: 0; font-weight: 500; font-size: var(--font-size-normal) }
 .formations img,
 .interests img { filter: brightness(1) contrast(1) saturate(0.8); }
 .diploma .white {
@@ -273,7 +313,9 @@
 }
 
 /* ---------- Carousel ---------- */
-.carouselViewport { margin-bottom: 8rem; }
+.carouselViewport {
+    margin-bottom: 8rem;
+}
 .carouselViewport img {
     width: 25vw;
     height: 40vh;
@@ -291,15 +333,16 @@
 
 .skillsGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
     gap: 0.5rem;
     justify-content: center;
+    justify-items: center;
     text-align: center;
 }
 
 .skill img {
-    width: 60px;
-    height: 60px;
+    width: 60%;
+    height: 70%;
     object-fit: contain;
 }
 
@@ -307,19 +350,100 @@
     border: 1px solid var(--color-card-border);
     padding: 1rem;
     border-radius: 15px;
-    height: 120px;
-    width: 150px;
+    height: 110px;
+    width: 130px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 0.8rem;
+    backdrop-filter: blur(15px);
     background-color: var(--color-card-background);
 }
 
 .skill p {
     display: flex;
     justify-content: center;
+    font-size: var(--font-size-tiny);
     align-items: center;
     color: var(--color-text-primary);
+}
+
+.typewriter {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 1.5s steps(30, end) forwards,
+    blink .7s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0 }
+    to { width: 100% }
+}
+
+
+@media screen and (width <= 1100px) {
+    .presentation {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .name {
+        text-align: center;
+        text-wrap: wrap;
+    }
+
+    .dates {
+        display: none;
+    }
+
+    .generalInfos {
+        align-items: center;
+    }
+
+    .role, .location {
+        font-size: var(--font-size-small);
+    }
+
+    .experiences,
+    .formations, .otherDiplomas,
+    .interests, .skills {
+        padding: 1rem 1rem;
+        margin-top: 4rem;
+        gap: 1rem;
+    }
+}
+
+@media screen and (width <= 800px) {
+    .experienceGrid {
+        grid-template-columns: repeat(auto-fit, minmax(60vw, 1fr));
+    }
+    .experienceDescription {
+        padding: 1.5rem 0.5rem;
+    }
+
+    .carouselViewport img{
+        height: 30vh;
+        width: 60vw;
+    }
+}
+
+@media screen and (width <= 500px) {
+    .skillsGrid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.75rem;
+        justify-items: stretch;
+    }
+
+    .skill {
+        width: 100%;
+        height: auto;
+        min-height: 110px;
+    }
+
+    .skill img {
+        width: 70%;
+        height: auto;
+    }
 }

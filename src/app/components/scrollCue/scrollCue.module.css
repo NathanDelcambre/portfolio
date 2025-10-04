@@ -1,7 +1,7 @@
 .scrollCueFixed {
     position: fixed;
     left: 50%;
-    bottom: 10rem;
+    bottom: 3rem;
     transform: translateX(-50%);
     z-index: 9998;
 
@@ -26,7 +26,7 @@
 }
 
 .scrollText {
-    font-size: 1.2rem;
+    font-size: 1rem;
     opacity: .8;
 }
 
@@ -37,4 +37,10 @@
 
 @media (prefers-reduced-motion: reduce) {
     .scrollCueFixed { animation: none; }
+}
+
+@media screen and (max-width: 850px) {
+    .scrollCueFixed {
+        display: none;
+    }
 }

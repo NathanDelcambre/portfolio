@@ -1,11 +1,19 @@
-import type {Hero, Experience, Formation, Diploma, Interest, Skill} from "./types";
+import type {NavTab, Hero, Experience, Formation, Diploma, Interest, Skill, HomeCard} from "./types";
+import {ArrowUpRight, FolderGit2, Home, Mail, User} from "lucide-react";
+
+export const NavItems: NavTab[] = [
+    { icon: Home, title: "Home", link: "/home"},
+    { icon: User, title: "About me", link: "/about-me"},
+    { icon: FolderGit2, title: "Projects", link: "/projects"},
+    { icon: Mail, title: "Contact", link: "/contact"}
+];
 
 export const hero: Hero = {
     role: "SOFTWARE ENGINEER",
     name: "Nathan DELCAMBRE",
-    location: "Nantes, Loire-Atlantique (44)",
-    ctaPrimary: "See my Resume",
-    ctaSecondary: "Contact Me",
+    location: "Loire-Atlantique, France",
+    ctaPrimary: "See my resume",
+    ctaSecondary: "Contact me",
 };
 
 export const experiences: Experience[] = [
@@ -15,7 +23,7 @@ export const experiences: Experience[] = [
         dates: "Sep 2022 – Sep 2025",
         blocks: [
             {
-                heading: "FINAL YEAR PROJECT",
+                heading: "🚀FINAL YEAR PROJECT",
                 tags: [
                     "Project management",
                     "SharePoint",
@@ -27,19 +35,20 @@ export const experiences: Experience[] = [
                 ],
             },
             {
-                heading: "CLOUD GAMING",
+                heading: "🪐CLOUD GAMING",
                 tags: [
                     "JavaScript",
                     "Dana",
                     "Real-Time"
                 ],
                 items: [
-                    "Integrated into a multinational, multi-technology team to deliver a UI in a real-time Cloud Gaming context.",
-                    "Contributed to the in-game ribbon and profile management, implemented using the Dana framework and middleware integration."
+                    "Worked into a multi-technology team to deliver a UI in a real-time Cloud Gaming context.",
+                    "Contributed to the in-game ribbon and profile management, implemented using the Dana framework.",
+                    "Integration of a middleware solution developed in Finland to serve as a bridge between the UI and the back-end G-cluster system"
                 ],
             },
             {
-                heading: "CUSTOMER PROJECT",
+                heading: "🌕️CUSTOMER PROJECT",
                 tags: [
                     "JavaScript",
                     "Dana",
@@ -52,7 +61,7 @@ export const experiences: Experience[] = [
                 ],
             },
             {
-                heading: "R&D DEPARTMENT",
+                heading: "✨R&D DEPARTMENT",
                 tags: [
                     "Android",
                     "Components",
@@ -71,7 +80,7 @@ export const experiences: Experience[] = [
         dates: "Apr 2021 – Jul 2021",
         blocks: [
             {
-                heading: "DUT INTERNSHIP",
+                heading: "🛸DUT INTERNSHIP",
                 tags: [
                     "Android",
                     "Compose",
@@ -79,8 +88,8 @@ export const experiences: Experience[] = [
                     "Mobile"
                 ],
                 items: [
-                    "Android application development training in Android Studio (TV-style UI).",
-                    "Benchmarked item rails (including Jetpack Compose) with Espresso and JUnit. Study about LazyRow, containerization, RecyclerView.",
+                    "Android application development training carried out in Android Studio with a focus on TV-style interfaces. Worked with Android Views, both through XML layouts and pure Java implementation, to gain full control over the components. ",
+                    "Benchmarked item rails (including Jetpack Compose) with Espresso and JUnit. Study about LazyRow, containerization and RecyclerView in order to integrate the best component in the Dana Framework.",
                     "Wrote a final report and dissertation."
                 ],
             },
@@ -113,9 +122,9 @@ export const formations: Formation[] = [
 ];
 
 export const diplomas: Diploma[] = [
-    { name: "Projet Voltaire", subtitle: "Business Level", imageSrc: "/images/certifications/projetVoltaire.png", imageAlt: "Projet Voltaire" },
-    { name: "TOEIC", subtitle: "945/990", imageSrc: "/images/certifications/toeic.png", imageAlt: "TOEIC" },
-    { name: "IELTS", subtitle: "7.0/9.0", imageSrc: "/images/certifications/ielts.png", imageAlt: "IELTS" },
+    { name: "Projet Voltaire", subtitle: "Business Level", imageSrc: "/images/certifications/projetVoltaire.png", imageAlt: "Projet Voltaire", tooltip: "French platform improving spelling and grammar through adaptive exercises and certification." },
+    { name: "TOEIC", subtitle: "945/990", imageSrc: "/images/certifications/toeic.png", imageAlt: "TOEIC", tooltip: "Standardized ETS test assessing workplace English listening and reading proficiency internationally." },
+    { name: "IELTS", subtitle: "7.0/9.0", imageSrc: "/images/certifications/ielts.png", imageAlt: "IELTS", tooltip: "International English test evaluating listening, reading, writing, speaking for study, migration."},
 ];
 
 export const interests: Interest[] = [
@@ -149,4 +158,60 @@ export const skills: Skill[] = [
     { name: "Python", imageSrc: "/images/skills/python.svg", imageAlt: "python" },
     { name: "Kotlin", imageSrc: "/images/skills/kotlin.svg", imageAlt: "kotlin" },
     { name: "MS365", imageSrc: "/images/skills/ms365.png", imageAlt: "ms365" }
+];
+
+export const CARDS: HomeCard[] = [
+    {
+        title: "About me",
+        tagline: "Discover my journey",
+        icon: User,
+        actions: [
+            {
+                label: "About me",
+                href: "/about-me",
+                icon: ArrowUpRight,
+                ariaLabel: "Open about me page",
+            },
+            {
+                label: "LinkedIn",
+                href: "https://www.linkedin.com/in/nathan-delcambre",
+                icon: ArrowUpRight,
+                external: true,
+                ariaLabel: "Open my LinkedIn profile in another tab",
+            },
+        ],
+    },
+    {
+        title: "Projects",
+        tagline: "Take a look at my recent projects",
+        icon: FolderGit2,
+        actions: [
+            {
+                label: "Projects",
+                href: "/projects",
+                icon: ArrowUpRight,
+                ariaLabel: "Open projects page",
+            },
+            {
+                label: "GitHub",
+                href: "https://github.com/NathanDelcambre",
+                icon: ArrowUpRight,
+                external: true,
+                ariaLabel: "Open github link in another tab",
+            },
+        ],
+    },
+    {
+        title: "Contact",
+        tagline: "Send me a message to collaborate",
+        icon: Mail,
+        actions: [
+            {
+                label: "Contact",
+                href: "/contact",
+                icon: ArrowUpRight,
+                ariaLabel: "Open contact page",
+            },
+        ],
+    },
 ];
