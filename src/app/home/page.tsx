@@ -14,8 +14,10 @@ export default function Home() {
             <main className={styles.main}>
                 <Image src="/images/home-bg.png" alt="bg" fill priority />
                 <div className={styles.homeContent}>
-                    <p data-anim="title" className={`${styles.title} ${styles.glowText}`}>WELCOME</p>
-
+                    <div className={styles.homeHeader}>
+                        <p data-anim="title" className={`${styles.title}`}>PORTFOLIO</p>
+                        <p data-anim={"subtitle"} className={`${styles.subtitle} ${styles.glowText}`}>Hi, I’m Nathan Delcambre — a french software engineer</p>
+                    </div>
                     <div className={styles.buttonsGrid}>
                         {CARDS.map((card, i) => {
                             const MainIcon = card.icon;

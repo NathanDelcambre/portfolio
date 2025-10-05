@@ -88,7 +88,7 @@
     padding: .7rem 1.5rem;
     border: 1px solid var(--color-button-border);
     border-radius: var(--border-radius-small);
-    background: var(--color-primary-accent);
+    background: rgba(120, 220, 255, 0.3);;
     color: var(--color-text-primary);
     font-weight: 600;
     cursor: pointer;
@@ -96,15 +96,13 @@
     font-size: var(--font-size-normal);
 }
 .primaryBtn:hover,
-.secondaryBtn:hover { background: var(--color-button-hovered); }
+.secondaryBtn:hover { background: rgba(120, 220, 255, 0.6); }
 
 .primaryBtn p,
 .secondaryBtn p{
-    background: linear-gradient(to right, var(--color-focus) 0%, var(--color-secondary-accent) 100%);
+    background: rgba(120, 220, 255, 0.3);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
     background-clip: text;
-    color: transparent;
     font-size: var(--font-size-small)
 }
 
@@ -187,7 +185,7 @@
 .waveMask{
     width: 3em; height: 1em;
     display: inline-block;
-    background: var(--color-secondary-accent);
+    background: var(--color-secondary);
     mask: url("/images/skills/wave.svg") no-repeat center / contain;
     vertical-align: middle;
 }
@@ -358,7 +356,7 @@
     align-items: center;
     gap: 0.8rem;
     backdrop-filter: blur(15px);
-    background-color: var(--color-card-background);
+    background: var(--color-card-background);
 }
 
 .skill p {

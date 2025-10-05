@@ -163,7 +163,7 @@ export const skills: Skill[] = [
 export const CARDS: HomeCard[] = [
     {
         title: "About me",
-        tagline: "Discover my journey",
+        tagline: "Learn about my path from surfer to developer",
         icon: User,
         actions: [
             {
@@ -183,7 +183,7 @@ export const CARDS: HomeCard[] = [
     },
     {
         title: "Projects",
-        tagline: "Take a look at my recent projects",
+        tagline: "Explore my real-world projects showcasing my coding skills",
         icon: FolderGit2,
         actions: [
             {
@@ -203,7 +203,7 @@ export const CARDS: HomeCard[] = [
     },
     {
         title: "Contact",
-        tagline: "Send me a message to collaborate",
+        tagline: "Have a project idea? Let’s bring it to life together",
         icon: Mail,
         actions: [
             {
