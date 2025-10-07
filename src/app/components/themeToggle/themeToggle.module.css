@@ -1,0 +1,30 @@
+.themeToggleFab {
+    position: fixed;
+    right: 1.25rem;
+    bottom: 1.25rem;
+    z-index: 9999;
+    width: 44px;
+    height: 44px;
+    display: grid;
+    place-items: center;
+    border-radius: 9999px;
+    border: 1px solid rgba(255,255,255,0.2);
+    background: rgba(20, 20, 20, 0.6);
+    backdrop-filter: blur(6px);
+    color: #fff;
+    cursor: pointer;
+    transition: transform .15s ease, box-shadow .2s ease, background .2s ease;
+    box-shadow: 0 4px 16px rgba(0,0,0,.35);
+}
+.themeToggleFab:hover { transform: translateY(-2px); }
+.themeToggleFab:active { transform: translateY(0); }
+
+:root:not(.dark) .themeToggleFab {
+    background: rgba(250, 250, 250, 01);
+    border-color: rgba(0,0,0,0.1);
+    color: #111;
+}
+
+html {
+    transition: background-color .2s ease, color .2s ease;
+}

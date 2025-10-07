@@ -12,18 +12,43 @@ export function useAboutGsap() {
     useGSAP(
         () => {
             const mm = gsap.matchMedia();
+
+            // 🌱 Motion réduite (accessibilité)
             mm.add("(prefers-reduced-motion: reduce)", () => {
-                gsap.set('[data-anim="hero-copy"] > *, [data-anim="hero-ctas"] > *', { opacity: 1, y: 0 });
-                gsap.set('[data-anim="card"], [data-anim="diploma"], [data-anim="exp-item"]', { opacity: 1, y: 0 });
+                gsap.set(
+                    '[data-anim="hero-copy"] > *, [data-anim="hero-ctas"] > *',
+                    { opacity: 1, y: 0 }
+                );
+                gsap.set(
+                    '[data-anim="card"], [data-anim="diploma"], [data-anim="exp-item"], [data-anim="skill"]',
+                    { opacity: 1, y: 0, x: 0, scale: 1, rotate: 0 }
+                );
             });
 
+            // 🚀 Animations normales
             mm.add("(prefers-reduced-motion: no-preference)", () => {
-                const tlHero = gsap.timeline({ defaults: { ease: "power2.out", duration: 0.8 } });
+                // --- Hero ---
+                const tlHero = gsap.timeline({
+                    defaults: { ease: "power2.out", duration: 0.8 },
+                });
                 tlHero
-                    .from('[data-anim="hero-img"]', { opacity: 0, scale: 0.92, filter: "blur(6px)" }, 0)
-                    .from('[data-anim="hero-copy"] > *', { y: 24, opacity: 0, stagger: 0.08 }, 0.1)
-                    .from('[data-anim="hero-ctas"] > *', { y: 18, opacity: 0, stagger: 0.06 }, 0.2);
+                    .from('[data-anim="hero-img"]', {
+                        opacity: 0,
+                        scale: 0.92,
+                        filter: "blur(6px)",
+                    }, 0)
+                    .from('[data-anim="hero-copy"] > *', {
+                        y: 24,
+                        opacity: 0,
+                        stagger: 0.08,
+                    }, 0.1)
+                    .from('[data-anim="hero-ctas"] > *', {
+                        y: 18,
+                        opacity: 0,
+                        stagger: 0.06,
+                    }, 0.2);
 
+                // Petit floating sur la photo
                 gsap.to('[data-anim="hero-img"]', {
                     y: 6,
                     duration: 3,
@@ -32,6 +57,7 @@ export function useAboutGsap() {
                     repeat: -1,
                 });
 
+                // --- Titles ---
                 gsap.utils.toArray<HTMLElement>('[data-anim="title"]').forEach((el) => {
                     gsap.from(el, {
                         opacity: 0,
@@ -46,6 +72,7 @@ export function useAboutGsap() {
                     });
                 });
 
+                // --- Experiences ---
                 gsap.utils.toArray<HTMLElement>('[data-anim="exp-item"]').forEach((wrap) => {
                     gsap.from(wrap, {
                         opacity: 0,
@@ -73,6 +100,7 @@ export function useAboutGsap() {
                     });
                 });
 
+                // --- Cards (formations) ---
                 gsap.utils.toArray<HTMLElement>('[data-anim="cards"]').forEach((grid) => {
                     const cards = grid.querySelectorAll<HTMLElement>('[data-anim="card"]');
                     gsap.from(cards, {
@@ -89,6 +117,7 @@ export function useAboutGsap() {
                     });
                 });
 
+                // --- Diplomas ---
                 gsap.utils.toArray<HTMLElement>('[data-anim="diploma"]').forEach((el, i) => {
                     gsap.from(el, {
                         opacity: 0,
@@ -104,6 +133,45 @@ export function useAboutGsap() {
                     });
                 });
 
+                // --- Skills (nouvelle anim stylée 🚀) ---
+                const distance = 40;
+                const skillItems = gsap.utils.toArray<HTMLElement>('[data-anim="skill"]');
+
+                gsap.set(skillItems, { willChange: "transform, opacity" });
+
+                ScrollTrigger.batch(skillItems, {
+                    start: "top 85%",
+                    onEnter: (batch) => {
+                        gsap.fromTo(
+                            batch,
+                            {
+                                opacity: 0,
+                                x: (i) => (i % 2 ? distance : -distance),
+                                rotate: (i) => (i % 2 ? 2 : -2),
+                                scale: 0.98,
+                            },
+                            {
+                                opacity: 1,
+                                x: 0,
+                                rotate: 0,
+                                scale: 1,
+                                duration: 0.6,
+                                ease: "power3.out",
+                                stagger: { each: 0.06, from: "edges" },
+                            }
+                        );
+                    },
+                    onLeaveBack: (batch) => {
+                        gsap.set(batch, {
+                            opacity: 0,
+                            x: (i) => (i % 2 ? distance : -distance),
+                            rotate: (i) => (i % 2 ? 2 : -2),
+                            scale: 0.98,
+                        });
+                    },
+                });
+
+                // --- Hero parallax on scroll ---
                 gsap.to('[data-anim="hero"]', {
                     yPercent: -4,
                     ease: "none",

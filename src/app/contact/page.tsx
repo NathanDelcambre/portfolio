@@ -54,27 +54,27 @@ export default function ContactPage() {
                     <div className={styles.rowContainer}>
                         <div className={styles.row}>
                             <label htmlFor="firstName" className={styles.label}>First name</label>
-                            <input type="text" id="firstName" name="firstName" required className={styles.input}/>
+                            <input placeholder={"..."} type="text" id="firstName" name="firstName" required className={styles.input}/>
                         </div>
 
                         <div className={styles.row}>
                             <label htmlFor="lastName" className={styles.label}>Last name</label>
-                            <input type="text" id="lastName" name="lastName" required className={styles.input}/>
+                            <input placeholder={"..."} type="text" id="lastName" name="lastName" required className={styles.input}/>
                         </div>
 
                         <div className={styles.row}>
                             <label htmlFor="email" className={styles.label}>Email</label>
-                            <input type="email" id="email" name="email" required className={styles.input}/>
+                            <input placeholder={"..."} type="email" id="email" name="email" required className={styles.input}/>
                         </div>
 
                         <div className={styles.row}>
                             <label htmlFor="subject" className={styles.label}>Object</label>
-                            <input type="text" id="subject" name="subject" required className={styles.input}/>
+                            <input placeholder={"..."} type="text" id="subject" name="subject" required className={styles.input}/>
                         </div>
 
                         <div className={`${styles.row} ${styles.fullWidth}`}>
                             <label htmlFor="message" className={styles.label}>Message</label>
-                            <textarea id="message" name="message" rows={5} required className={styles.textarea}/>
+                            <textarea placeholder={""} id="message" name="message" rows={4} required className={styles.textarea}/>
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     <div className={styles.linksGrid} data-anim={"cards"}>
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/phone.png" alt="telephone" width={64} height={64}
+                                <Image src="/images/links/phone2.svg" alt="telephone" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <p>07 50 82 77 52</p>
@@ -111,7 +111,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/gmail.png" alt="gmail" width={64} height={64}
+                                <Image src="/images/links/gmail.png" alt="gmail" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
 
@@ -128,7 +128,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/linkedIn.png" alt="linkedIn" width={64} height={64}
+                                <Image src="/images/links/linkedIn.png" alt="linkedIn" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <Link href="https://www.linkedin.com/in/nathan-delcambre/" target="_blank"
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/github.png" alt="github" width={64} height={64}
+                                <Image src="/images/skills/github2.svg" alt="github" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <Link href="https://github.com/NathanDelcambre" target="_blank"

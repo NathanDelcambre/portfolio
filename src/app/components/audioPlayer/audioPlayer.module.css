@@ -1,0 +1,194 @@
+.hidden { display: none; }
+
+.floatRoot{
+    position: fixed;
+    left: 20px;
+    bottom: 20px;
+    z-index: 50;
+}
+
+.fab{
+    width: 44px;
+    height: 44px;
+    border-radius: 999px;
+    border: black;
+    background: white;
+    color: black;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
+    cursor: pointer;
+    transition: transform .12s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
+}
+
+.panel{
+    position: absolute;
+    left: 0;
+    bottom: 66px;
+    width: 320px;
+    border: 1px solid var(--color-secondary-soft);
+    background: black;
+    color: white;
+    border-radius: 16px;
+    box-shadow: 0 0 2px var(--color-secondary-accent);
+    padding: 1.52vw 2vw;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    transform: translateY(10px) scale(.98);
+    pointer-events: none;
+    transition: opacity .22s ease, transform .22s ease;
+}
+.panelOpen{
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+
+.header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 6px;
+}
+.trackTitle{
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progressRow{
+    display: grid;
+    grid-template-columns: 40px 1fr 40px;
+    align-items: center;
+}
+.time{
+    font-size: 11px;
+    color: white;
+    text-align: start;
+}
+
+.fullTime {
+    font-size: 11px;
+    color: white;
+    text-align: end;
+}
+
+.range{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 6px;
+    border-radius: 999px;
+    background: #8e969b;
+    outline: none;
+    cursor: pointer;
+}
+.range::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.range::-moz-range-thumb{
+    width: 14px;
+    height: 14px;
+    border-radius: 999px;
+    background: #fff;
+    cursor: pointer;
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+}
+.range::-moz-range-track{
+    height: 6px;
+    background: #2a2b2f;
+    border-radius: 999px;
+}
+
+.rangeProgress{
+    background: linear-gradient(
+            to right,
+            var(--color-secondary) 0%,
+            var(--color-secondary) calc(var(--val, 0) * 1%),
+            #2a2b2f calc(var(--val, 0) * 1%),
+            #2a2b2f 100%
+    );
+}
+
+.controls{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+.controlsRow {
+    display: flex;
+    justify-content: space-between;
+}
+
+.iconBtn, .smallIconBtn{
+    width: 25px;
+    height: 25px;
+    border-radius: 12px;
+    border: 1px solid #33363d;
+    background: black;
+    color: white;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    transition: background .15s ease, border-color .15s ease, transform .05s ease;
+}
+.smallIconBtn {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+.iconBtn:hover, .smallIconBtn:hover{ background: #1a1b1f; border-color: var(--color-chip-border); }
+.iconBtn:active, .smallIconBtn:active{ transform: translateY(1px); }
+
+.volumeRow{
+    display: grid;
+    grid-template-columns: auto 80px auto;
+    align-items: center;
+    gap: 2px;
+}
+.rangeShort {
+    width: 100%;
+    height: 4px;
+}
+
+.rangeShort::-webkit-slider-runnable-track {
+    height: 4px;
+}
+.rangeShort::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    margin-top: -3px;
+    cursor: pointer;
+}
+
+.rangeShort::-moz-range-track {
+    height: 4px;
+}
+.rangeShort::-moz-range-thumb {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #fff;
+    border: 1px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.25);
+    cursor: pointer;
+}

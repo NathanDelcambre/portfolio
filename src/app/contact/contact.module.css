@@ -3,7 +3,8 @@
     justify-content: center;
     flex-direction: column;
     padding: 4rem 1rem;
-    gap: 6rem;
+    gap: 4rem;
+    margin-top: 7vh;
     margin-bottom: 5rem;
 }
 
@@ -12,13 +13,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 5rem;
+    margin-bottom: 4rem;
     gap: 1.5rem;
 }
 
 .sectionTitle {
     display: inline-block;
-    background: linear-gradient(to right, #ffffff 40%, #4d9dda 55%);
+    background: linear-gradient(to right, var(--color-secondary) 40%, var(--color-secondary-accent) 55%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -28,8 +29,8 @@
 }
 
 .subtitle {
-    color: gray;
-    font-size: 1.5rem;
+    color: var(--color-text-secondary);
+    font-size: var(--font-size-large);
     text-align: center;
 }
 
@@ -44,7 +45,7 @@
 .rowContainer {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem 3rem;
+    gap: 1rem 2rem;
 }
 
 .row {
@@ -67,17 +68,19 @@
 
 .label {
     font-weight: 600;
+    font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
     margin-bottom: 0.4rem;
 }
 
 .input,
 .textarea {
     padding: 0.75rem 1rem;
-    border: 1px solid #ccc;
+    border: 1px solid var(--color-input-border);
     border-radius: 8px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     transition: border-color 0.2s ease;
-    background-color: #000103;
+    background-color: var(--color-input-background);
     resize: vertical;
     max-height: 400px;
 }
@@ -85,14 +88,13 @@
 .input:focus,
 .textarea:focus {
     outline: none;
-    border-color: #7db7ff;
-    box-shadow: 0 0 0 2px rgba(0, 112, 243, 0.2);
+    border-color: var(--color-card-border);
 }
 
 .button {
-    font-size: var(--font-size-normal);
+    font-size: var(--font-size-small);
     align-self: center;
-    background-color: #4f82c2;
+    background-color: var(--color-button-background);
     color: white;
     font-weight: 600;
     margin-top: 1.5rem;
@@ -104,7 +106,7 @@
 }
 
 .button:hover {
-    background-color: #0059c1;
+    background-color: var(--color-button-hovered);
 }
 
 .button:disabled {
@@ -126,11 +128,6 @@
     margin-top: 2rem;
 }
 
-.coordsTitle {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-}
-
 .linksGrid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 0.5fr));
@@ -144,20 +141,20 @@
     width: 150px;
     height: 150px;
     border-radius: 24px;
-    border: 1px solid rgba(255, 255, 255, 0.29);
-    box-shadow: 0 0 15px rgba(250, 250, 250, 0.3);
+    border: 1px solid var(--color-card-border);
     align-items: center;
     margin-bottom: 0.8rem;
+    font-size: var(--font-size-small);
     gap: 0.5rem;
-    color: #ffffff;
-    background-color: rgba(49, 49, 49, 0.17);
+    color: var(--color-text-primary);
+    background-color: var(--color-card-background);
     transition: all ease 0.5s;
     cursor: pointer;
 }
 
 .coordsItem:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px white;
+    box-shadow: 0 0 10px var(--color-foreground);;
 }
 
 .iconBox {
@@ -174,7 +171,7 @@
 }
 
 .coordsLink {
-    color: #ffffff;
+    color: var(--color-text-primary);
     text-decoration: none;
 }
 
@@ -221,4 +218,22 @@
 
 .copyBtn:hover {
     transform: scale(1.2);
+}
+
+@media screen and (width <= 1100px) {
+    .contactPage {
+        gap: 0;
+    }
+
+    .linksGrid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+        gap: 1rem;
+    }
+
+    .coordsItem {
+        text-align: center;
+        width: 100px;
+        height: 100px;
+    }
 }

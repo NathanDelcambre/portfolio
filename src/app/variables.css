@@ -1,23 +1,80 @@
 :root {
     /* Colors */
+    --color-black-and-white: #ffffff;
     --color-background: #ffffff;
+    --color-nav-background-blur: rgba(255, 255, 255, 0.5);
+    --color-background-blur: rgba(255, 255, 255, 0.5);
+    --color-background-hard-blur: rgba(255, 255, 255, 0.9);
     --color-foreground: #010810;
-    --color-text-primary: #ffffff;
+    --color-text-primary: #000000;
+    --color-text-secondary: #3a3a3a;
     --color-primary: #313131;
-    --color-secondary: #a1e6ff;
-    --color-light-gray: #999;
-    --color-gray: #666;
-    --color-dark-gray: #333;
+    --color-primary-accent: #efefef;
+    --color-secondary: #89dfff;
+    --color-secondary-soft: rgb(226, 247, 255);
+    --color-secondary-accent: #4fb3ff;
+    --color-tertiary: #737373;
+    --color-dropShadow: rgba(75,75,75, 0.4);
+    --color-dropShadow-blue: transparent;
+    --color-text-hovered: #000000;
+    --color-button-background: rgba(0, 77, 110, 0.9);
+    --color-button-hovered: rgba(0, 77, 110, 0.7);
+    --color-card-border: #d2d2d2;
+    --color-button-border: #bdbdbd;
+    --color-input-border: rgb(0, 0, 0);
+    --color-chip-border: gray;
+    --color-card-background: rgb(255, 255, 255);
+    --color-input-background: rgba(255, 255, 255, 0.88);
+    --color-focus: #18395e;
+    --color-star-primary: #eff8ff;
+    --color-star-secondary: #ffffff;
+    --color-star-warm: #ffffff;
 
     /* Font sizes */
-    --font-size-small: 0.6rem;
-    --font-size-normal: 0.8rem;
-    --font-size-large: 1rem;
+    --font-size-tiny: calc(8px + 0.4vw);
+    --font-size-small: calc(10px + 0.4vw);
+    --font-size-normal: calc(12px + 0.5vw);
+    --font-size-large: calc(15px + 0.5vw);
+    --font-size-huge: calc(30px + 2vw);
+
+    /* Diplomas logo */
+    --img-filter: brightness(0);
+    --img-opacity: 0.9;
+
+    /* Border radius */
+    --border-radius-small: 12px;
+    --large-border-radius: 32px;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-background: #010810;
-        --color-foreground: #ededed;
-    }
+.dark {
+    --color-black-and-white: #000;
+    --color-background: #010810;
+    --color-nav-background-blur: rgba(1, 8, 16, 0.5);
+    --color-background-blur: rgba(1, 8, 16, 0.5);
+    --color-background-hard-blur: rgba(1, 8, 16, 0.85);
+    --color-foreground: #ffffff;
+    --color-text-primary: #ffffff;
+    --color-text-secondary: #cecece;
+    --color-primary: #313131;
+    --color-primary-accent: #09152c;
+    --color-secondary: #a1e6ff;
+    --color-secondary-soft: rgb(6, 31, 47);
+    --color-tertiary: #737373;
+    --color-dropShadow: rgba(125,125,125, 0.4);
+    --color-dropShadow-blue: #89dfff;
+    --color-text-hovered: #ffffff;
+    --color-button-background: rgba(120, 220, 255, 0.3);
+    --color-button-hovered: rgba(120, 220, 255, 0.6);
+    --color-card-border: #15274d;
+    --color-button-border: rgba(255, 255, 255, 0);
+    --color-input-border: rgba(255, 255, 255, 0.32);
+    --color-chip-border: transparent;
+    --color-card-background: #020c18;
+    --color-input-background: rgba(0, 0, 0, 0.88);
+    --color-focus: #e0e0e0;
+    --img-filter: brightness(0) invert(1);
+    --img-opacity: 1;
+    --color-star-primary: #a1d4ff;
+    --color-star-secondary: #c2c2c2;
+    --color-star-warm: #ffffff;
 }
