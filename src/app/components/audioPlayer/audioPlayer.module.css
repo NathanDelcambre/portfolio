@@ -16,7 +16,7 @@
     color: black;
     display: grid;
     place-items: center;
-    box-shadow: var(--color-dropShadow);
+    box-shadow: 0 4px 16px rgba(0,0,0,0.35);
     cursor: pointer;
     transition: transform .12s ease, background .2s ease, border-color .2s ease, opacity .2s ease;
 }
