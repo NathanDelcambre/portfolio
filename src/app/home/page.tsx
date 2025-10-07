@@ -16,7 +16,7 @@ export default function Home() {
                 <div className={styles.homeContent}>
                     <div className={styles.homeHeader}>
                         <p data-anim="title" className={`${styles.title}`}>PORTFOLIO</p>
-                        <p data-anim={"subtitle"} className={`${styles.subtitle} ${styles.glowText}`}>Hi, I’m Nathan Delcambre — a french software engineer</p>
+                        <p data-anim={"subtitle"} className={`${styles.subtitle} ${styles.glowText} ${styles.typewriter}`}>Hi, I’m Nathan Delcambre — a french software engineer</p>
                     </div>
                     <div className={styles.buttonsGrid}>
                         {CARDS.map((card, i) => {

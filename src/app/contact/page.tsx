@@ -74,7 +74,7 @@ export default function ContactPage() {
 
                         <div className={`${styles.row} ${styles.fullWidth}`}>
                             <label htmlFor="message" className={styles.label}>Message</label>
-                            <textarea placeholder={""} id="message" name="message" rows={5} required className={styles.textarea}/>
+                            <textarea placeholder={""} id="message" name="message" rows={4} required className={styles.textarea}/>
                         </div>
                     </div>
 
@@ -103,7 +103,7 @@ export default function ContactPage() {
                     <div className={styles.linksGrid} data-anim={"cards"}>
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/links/phone.png" alt="telephone" width={64} height={64}
+                                <Image src="/images/links/phone2.svg" alt="telephone" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <p>07 50 82 77 52</p>
@@ -137,7 +137,7 @@ export default function ContactPage() {
 
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
-                                <Image src="/images/links/github.png" alt="github" width={64} height={64}
+                                <Image src="/images/skills/github2.svg" alt="github" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
                             <Link href="https://github.com/NathanDelcambre" target="_blank"

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { Sun, Moon } from "lucide-react";
 import styles from "./themeToggle.module.css";
+import { usePathname } from "next/navigation";
 
 type Theme = "light" | "dark";
 
@@ -13,6 +14,7 @@ function getSystemTheme(): Theme {
 
 export default function ThemeToggle() {
     const [theme, setTheme] = useState<Theme | null>(null);
+    const pathname = usePathname();
 
     useEffect(() => {
         const saved = window.localStorage.getItem("theme") as Theme | null;
@@ -31,6 +33,7 @@ export default function ThemeToggle() {
         window.localStorage.setItem("theme", next);
     };
 
+    if (pathname === "/home") return null;
     if (theme === null) return null;
 
     return (

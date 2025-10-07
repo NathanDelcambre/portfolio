@@ -5,6 +5,7 @@
     padding: 4rem 1rem;
     gap: 4rem;
     margin-top: 7vh;
+    margin-bottom: 5rem;
 }
 
 .heading {
@@ -68,6 +69,7 @@
 .label {
     font-weight: 600;
     font-size: var(--font-size-small);
+    color: var(--color-text-secondary);
     margin-bottom: 0.4rem;
 }
 
@@ -92,7 +94,7 @@
 .button {
     font-size: var(--font-size-small);
     align-self: center;
-    background-color: rgba(120, 220, 255, 0.3);
+    background-color: var(--color-button-background);
     color: white;
     font-weight: 600;
     margin-top: 1.5rem;
@@ -104,7 +106,7 @@
 }
 
 .button:hover {
-    background-color: rgba(120, 220, 255, 0.6);;
+    background-color: var(--color-button-hovered);
 }
 
 .button:disabled {

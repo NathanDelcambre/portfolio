@@ -7,6 +7,7 @@ import Navigation from "@/app/components/navBar/navBar";
 import ThemeToggle from "@/app/components/themeToggle/themeToggle";
 import SimpleAudioPlayer from "@/app/components/audioPlayer/audioPlayer";
 import Starfield from "@/app/components/starField/starField";
+import Background from "@/app/components/background/background";
 
 const outfit = Outfit({
   weight: "500",
@@ -24,26 +25,44 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={outfit.className} suppressHydrationWarning={true}>
-    <body>
-    <Navigation/>
-    <Starfield
-        density={3}
-        layers={5}
-        baseSpeed={0.003}
-        interactive
-    />
-    <main>
-      {children}
-    </main>
-    <footer className={styles.footer}>
-      <div className={styles.footerContent}>
-        <p>© 2025 Nathan Delcambre. All rights reserved.</p>
-      </div>
-    </footer>
-    <SimpleAudioPlayer />
-    <ThemeToggle />
-    </body>
-    </html>
+      <html lang="en" className={outfit.className} suppressHydrationWarning={true}>
+      <head>
+        <script
+            dangerouslySetInnerHTML={{
+              __html: `
+(function() {
+  try {
+    var saved = localStorage.getItem('theme');
+    var prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var theme = saved || (prefersDark ? 'dark' : 'light');
+    if (theme === 'dark') {
+      document.documentElement.classList.add('dark');
+      document.documentElement.style.colorScheme = 'dark';
+    } else {
+      document.documentElement.classList.remove('dark');
+      document.documentElement.style.colorScheme = 'light';
+    }
+  } catch (e) {}
+})();
+`
+            }}
+        />
+        <title></title>
+      </head>
+      <body>
+      <Navigation/>
+      <Background/>
+      <main>
+        {children}
+      </main>
+      <footer className={styles.footer}>
+        <div className={styles.footerContent}>
+          <p>© 2025 Nathan Delcambre. All rights reserved.</p>
+        </div>
+      </footer>
+      <SimpleAudioPlayer/>
+      <ThemeToggle/>
+      </body>
+      </html>
   );
 }

@@ -2,8 +2,9 @@
     /* Colors */
     --color-black-and-white: #ffffff;
     --color-background: #ffffff;
+    --color-nav-background-blur: rgba(255, 255, 255, 0.5);
     --color-background-blur: rgba(255, 255, 255, 0.5);
-    --color-background-hard-blur: rgba(255, 255, 255, 0.8);
+    --color-background-hard-blur: rgba(255, 255, 255, 0.9);
     --color-foreground: #010810;
     --color-text-primary: #000000;
     --color-text-secondary: #3a3a3a;
@@ -16,12 +17,13 @@
     --color-dropShadow: rgba(75,75,75, 0.4);
     --color-dropShadow-blue: transparent;
     --color-text-hovered: #000000;
-    --color-button-hovered: #c9c9c9;
+    --color-button-background: rgba(0, 77, 110, 0.9);
+    --color-button-hovered: rgba(0, 77, 110, 0.7);
     --color-card-border: #d2d2d2;
     --color-button-border: #bdbdbd;
     --color-input-border: rgb(0, 0, 0);
     --color-chip-border: gray;
-    --color-card-background: rgb(226, 247, 255);
+    --color-card-background: rgb(255, 255, 255);
     --color-input-background: rgba(255, 255, 255, 0.88);
     --color-focus: #18395e;
     --color-star-primary: #eff8ff;
@@ -47,8 +49,9 @@
 .dark {
     --color-black-and-white: #000;
     --color-background: #010810;
+    --color-nav-background-blur: rgba(1, 8, 16, 0.5);
     --color-background-blur: rgba(1, 8, 16, 0.5);
-    --color-background-hard-blur: rgba(1, 8, 16, 0.8);
+    --color-background-hard-blur: rgba(1, 8, 16, 0.85);
     --color-foreground: #ffffff;
     --color-text-primary: #ffffff;
     --color-text-secondary: #cecece;
@@ -60,7 +63,8 @@
     --color-dropShadow: rgba(125,125,125, 0.4);
     --color-dropShadow-blue: #89dfff;
     --color-text-hovered: #ffffff;
-    --color-button-hovered: #15334f;
+    --color-button-background: rgba(120, 220, 255, 0.3);
+    --color-button-hovered: rgba(120, 220, 255, 0.6);
     --color-card-border: #15274d;
     --color-button-border: rgba(255, 255, 255, 0);
     --color-input-border: rgba(255, 255, 255, 0.32);

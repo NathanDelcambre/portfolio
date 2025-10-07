@@ -11,9 +11,9 @@
     width: 44px;
     height: 44px;
     border-radius: 999px;
-    border: 1px solid var(--color-background);
-    background: var(--color-text-primary);
-    color: var(--color-black-and-white);
+    border: black;
+    background: white;
+    color: black;
     display: grid;
     place-items: center;
     box-shadow: var(--color-dropShadow);
@@ -27,8 +27,8 @@
     bottom: 66px;
     width: 320px;
     border: 1px solid var(--color-secondary-soft);
-    background: var(--color-background);
-    color: var(--color-text-primary);
+    background: black;
+    color: white;
     border-radius: 16px;
     box-shadow: 0 0 2px var(--color-secondary-accent);
     padding: 1.52vw 2vw;
@@ -55,7 +55,7 @@
 .trackTitle{
     font-size: 14px;
     font-weight: 600;
-    color: var(--color-text-primary);
+    color: white;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -68,13 +68,13 @@
 }
 .time{
     font-size: 11px;
-    color: var(--color-text-secondary);
+    color: white;
     text-align: start;
 }
 
 .fullTime {
     font-size: 11px;
-    color: var(--color-text-secondary);
+    color: white;
     text-align: end;
 }
 
@@ -137,9 +137,9 @@
     width: 25px;
     height: 25px;
     border-radius: 12px;
-    border: 1px solid var(--color-chip-border);
-    background: #1a1b1f;
-    color: var(--color-text-primary);
+    border: 1px solid #33363d;
+    background: black;
+    color: white;
     display: grid;
     place-items: center;
     cursor: pointer;
@@ -150,7 +150,7 @@
     height: 20px;
     border: none;
 }
-.iconBtn:hover, .smallIconBtn:hover{ background: var(--color-); border-color: #33363d; }
+.iconBtn:hover, .smallIconBtn:hover{ background: #1a1b1f; border-color: var(--color-chip-border); }
 .iconBtn:active, .smallIconBtn:active{ transform: translateY(1px); }
 
 .volumeRow{

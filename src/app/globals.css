@@ -50,3 +50,28 @@ main {
     padding: 2rem !important;
   }
 }
+
+.bg-root {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+}
+
+.bg-light {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.bg-starfield {
+  position: absolute;
+  inset: 0;
+  display: none;
+}
+
+html.dark .bg-light {
+  display: none;
+}
+html.dark .bg-starfield {
+  display: block;
+}
