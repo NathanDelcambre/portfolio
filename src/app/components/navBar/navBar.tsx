@@ -34,11 +34,9 @@ export default function NavBar() {
 
     return (
         <div className={styles.header}>
-            <div className={styles.logo}>
-                <Link href="/home" aria-label="Accueil">
-                    <Image src={"/images/logo.png"} alt="" width={90} height={25} />
-                </Link>
-            </div>
+            <Link href="/home" aria-label="Accueil">
+                <div className={styles.logo}></div>
+            </Link>
 
             <button
                 type="button"
@@ -69,6 +67,12 @@ export default function NavBar() {
                     );
                 })}
             </nav>
+
+            <div className={styles.githubLink}>
+                <Link href={"https://github.com/NathanDelcambre"} target={"_blank"}>
+                    <Image className={styles.githubPicture} src={"/images/gh_logo.png"} alt="" width={90} height={90} />
+                </Link>
+            </div>
 
             <div
                 id={menuId}

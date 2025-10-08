@@ -106,7 +106,7 @@ export default function ContactPage() {
                                 <Image src="/images/links/phone2.svg" alt="telephone" width={64} height={64}
                                        className={styles.icon}/>
                             </div>
-                            <p>07 50 82 77 52</p>
+                            <p>0750827752</p>
                         </div>
 
                         <div className={styles.coordsItem}>

@@ -13,7 +13,6 @@ export function useAboutGsap() {
         () => {
             const mm = gsap.matchMedia();
 
-            // 🌱 Motion réduite (accessibilité)
             mm.add("(prefers-reduced-motion: reduce)", () => {
                 gsap.set(
                     '[data-anim="hero-copy"] > *, [data-anim="hero-ctas"] > *',
@@ -25,7 +24,6 @@ export function useAboutGsap() {
                 );
             });
 
-            // 🚀 Animations normales
             mm.add("(prefers-reduced-motion: no-preference)", () => {
                 // --- Hero ---
                 const tlHero = gsap.timeline({

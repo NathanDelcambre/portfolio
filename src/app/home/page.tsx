@@ -1,7 +1,6 @@
 "use client";
 
 import styles from "./page.module.css";
-import Image from "next/image";
 import Link from "next/link";
 import { useAboutGsap } from "@/app/hooks/useGsap";
 import { CARDS } from "@/app/content/content";
@@ -12,11 +11,13 @@ export default function Home() {
     return (
         <div ref={scope} className={styles.homePage}>
             <main className={styles.main}>
-                <Image src="/images/home-bg.png" alt="bg" fill priority />
                 <div className={styles.homeContent}>
                     <div className={styles.homeHeader}>
-                        <p data-anim="title" className={`${styles.title}`}>PORTFOLIO</p>
-                        <p data-anim={"subtitle"} className={`${styles.subtitle} ${styles.glowText} ${styles.typewriter}`}>Hi, I’m Nathan Delcambre — a french software engineer</p>
+                        <p className={styles.subtitle}>
+                          <span className={styles.typewriter} data-chars="56">
+                            Hi, I’m <b className={styles.blue}>Nathan</b> — a french software engineer...
+                          </span>
+                        </p>
                     </div>
                     <div className={styles.buttonsGrid}>
                         {CARDS.map((card, i) => {

@@ -70,7 +70,7 @@
 }
 
 .name { font-size: var(--font-size-huge); font-weight: 700; }
-.location { font-size: var(--font-size-normal); color: var(--color-tertiary); }
+.years { font-size: var(--font-size-large); color: var(--color-tertiary); }
 
 .buttons {
     display: flex;
@@ -227,13 +227,13 @@
 }
 
 .subject {
-    background-color: var(--color-secondary-soft);
+    background-color: transparent;
     padding: 10px 15px;
     border-radius: 15px;
     border: 1px solid var(--color-button-border);
     color: var(--color-foreground);
     font-weight: 600;
-    box-shadow: 0 0 4px var(--color-dropShadow-blue);
+    box-shadow: 0 0 8px var(--color-dropShadow-blue);
     font-size: var(--font-size-small);
 }
 
@@ -280,7 +280,7 @@
 
 .diplomasGrid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     place-items: center;
     gap: 2vw;
 }
@@ -288,19 +288,29 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: var(--large-border-radius);
-    background: var(--color-background-hard-blur);
-    box-shadow: 2px 2px 15px var(--color-dropShadow);
-    padding: 2vw 4vw;
+    justify-content: center;
+    border-radius: var(--border-radius-small);
+    background: var(--color-card-background);
+    border: 1px solid var(--color-card-border);
+    width: 150px;
+    height: 150px;
+    cursor: pointer;
 }
 
-.diploma img { width: 120px; height: 120px; object-fit: contain; }
-.diploma p { margin: 0; font-weight: 500; font-size: var(--font-size-normal) }
+.diploma img { width: 80px; height: 80px; object-fit: contain; }
+.diploma p { margin: 0; font-weight: 500; font-size: var(--font-size-tiny) }
+.secondaryText {
+    color: var(--color-tertiary)
+}
 .formations img,
 .interests img { filter: brightness(1) contrast(1) saturate(0.8); }
 .diploma .white {
     filter: var(--img-filter);
     opacity: var(--img-opacity);
+}
+
+.diploma:hover{
+    box-shadow: 0 0 10px #ffe99c;
 }
 
 .carouselViewport {
@@ -338,7 +348,7 @@
 .skill {
     border: 1px solid var(--color-card-border);
     padding: 1rem;
-    border-radius: 15px;
+    border-radius: var(--border-radius-small);
     height: 110px;
     width: 130px;
     display: flex;
@@ -373,11 +383,6 @@
 
 
 @media screen and (width <= 1100px) {
-    .presentation {
-        flex-direction: column;
-        gap: 0;
-    }
-
     .name {
         text-align: center;
         text-wrap: wrap;
@@ -385,6 +390,10 @@
 
     .dates {
         display: none;
+    }
+
+    .presentation {
+        gap: 0.5rem;
     }
 
     .generalInfos {
@@ -405,6 +414,10 @@
 }
 
 @media screen and (width <= 800px) {
+    .presentation {
+        flex-direction: column;
+        gap: 0;
+    }
     .experienceGrid {
         grid-template-columns: repeat(auto-fit, minmax(60vw, 1fr));
     }
@@ -416,23 +429,29 @@
         height: 30vh;
         width: 60vw;
     }
+    .profilePicture img {
+        width: 250px;
+        height: auto;
+    }
 }
 
 @media screen and (width <= 500px) {
     .skillsGrid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 0.75rem;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.3rem;
         justify-items: stretch;
     }
 
     .skill {
         width: 100%;
         height: auto;
-        min-height: 110px;
+        min-height: 60px;
+        gap: 1vh;
+        padding: 1vh
     }
 
     .skill img {
-        width: 70%;
-        height: auto;
+        width: auto;
+        height: 40px;
     }
 }

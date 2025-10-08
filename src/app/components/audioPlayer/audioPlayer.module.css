@@ -27,8 +27,8 @@
     bottom: 66px;
     width: 320px;
     border: 1px solid var(--color-secondary-soft);
-    background: black;
-    color: white;
+    background: var(--color-black-and-white);
+    color: var(--color-text-primary);
     border-radius: 16px;
     box-shadow: 0 0 2px var(--color-secondary-accent);
     padding: 1.52vw 2vw;
@@ -55,7 +55,7 @@
 .trackTitle{
     font-size: 14px;
     font-weight: 600;
-    color: white;
+    color: var(--color-text-secondary);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
@@ -68,13 +68,13 @@
 }
 .time{
     font-size: 11px;
-    color: white;
+    color: var(--color-text-secondary);
     text-align: start;
 }
 
 .fullTime {
     font-size: 11px;
-    color: white;
+    color: var(--color-text-secondary);
     text-align: end;
 }
 
@@ -93,7 +93,7 @@
     width: 14px;
     height: 14px;
     border-radius: 999px;
-    background: #fff;
+    background: white;
     cursor: pointer;
     border: 2px solid #fff;
     box-shadow: 0 1px 3px rgba(0,0,0,.25);
@@ -109,7 +109,7 @@
 }
 .range::-moz-range-track{
     height: 6px;
-    background: #2a2b2f;
+    background: var(--color-tertiary);
     border-radius: 999px;
 }
 
@@ -118,8 +118,8 @@
             to right,
             var(--color-secondary) 0%,
             var(--color-secondary) calc(var(--val, 0) * 1%),
-            #2a2b2f calc(var(--val, 0) * 1%),
-            #2a2b2f 100%
+            var(--color-tertiary) calc(var(--val, 0) * 1%),
+            var(--color-tertiary) 100%
     );
 }
 
@@ -138,8 +138,8 @@
     height: 25px;
     border-radius: 12px;
     border: 1px solid #33363d;
-    background: black;
-    color: white;
+    background: var(--color-black-and-white);
+    color: var(--color-tertiary);
     display: grid;
     place-items: center;
     cursor: pointer;
@@ -150,7 +150,7 @@
     height: 20px;
     border: none;
 }
-.iconBtn:hover, .smallIconBtn:hover{ background: #1a1b1f; border-color: var(--color-chip-border); }
+.iconBtn:hover, .smallIconBtn:hover{ background: var(--color-primary-accent); border-color: var(--color-chip-border); }
 .iconBtn:active, .smallIconBtn:active{ transform: translateY(1px); }
 
 .volumeRow{

@@ -23,7 +23,6 @@ export default function AboutMePage() {
 
     return (
         <div ref={scope} className={styles.aboutMePage}>
-            {/* Hero */}
             <section className={styles.presentation}>
                 <div className={styles.profilePicture}>
                     <div className={styles.profilePictureContainer} ref={tilt.ref}
@@ -42,7 +41,7 @@ export default function AboutMePage() {
                 <div className={styles.generalInfos} data-anim={"hero-copy"}>
                     <h1 className={`${styles.name} ${styles.typewriter}`}>{hero.name}</h1>
                     <p className={styles.role}>{hero.role}</p>
-                    <p className={styles.location}>{hero.location}</p>
+                    <p className={styles.years}>{hero.years}</p>
                     <div className={styles.buttons} data-anim={"hero-ctas"}>
                         <button className={styles.primaryBtn}>
                             <a href={"/pdf/Curriculum-Vitae_Nathan-DELCAMBRE.pdf"} target="CV - Nathan Delcambre"
@@ -58,7 +57,6 @@ export default function AboutMePage() {
 
             <ScrollCue />
 
-            {/* Experiences */}
             <section className={styles.experiences} data-anim={"exp"}>
                 <div className={styles.heading}>
                     <h2 className={styles.sectionTitle} data-anim={"title"}>Experiences</h2>
@@ -129,7 +127,6 @@ export default function AboutMePage() {
                 })}
             </section>
 
-            {/* Skills */}
             <section className={styles.skills} data-anim={"skills"}>
                 <div className={styles.heading}>
                     <h2 data-anim={"title"}>Skills</h2>
@@ -166,27 +163,27 @@ export default function AboutMePage() {
                 </div>
             </section>
 
-            {/* Certifications */}
             <section className={styles.otherDiplomas} data-anim={"formations"}>
                 <div className={styles.heading}>
                     <h2 data-anim={"title"}>Certifications</h2>
-                    <h3 data-anim={"title"}>Completing my profile with language certifications</h3>
+                    <h3 data-anim={"title"}>Completing my profile with language and lifesaving certifications</h3>
                 </div>
 
                 <div className={styles.diplomasGrid} data-anim={"diplomas"}>
                     {diplomas.map((d) => (
-                        <div className={styles.diploma} key={d.name} data-anim={"diploma"} title={d.tooltip}>
-                            <img className={styles.white} src={d.imageSrc} alt={d.imageAlt}/>
-                            <p>{d.name}</p>
-                            {d.subtitle && (
-                                <p className={styles.secondaryText}>{d.subtitle}</p>
-                            )}
-                        </div>
+                        <Link target="_blank" href={d.link}>
+                            <div className={styles.diploma} key={d.name} data-anim={"diploma"} title={d.tooltip}>
+                                <img className={styles.white} src={d.imageSrc} alt={d.imageAlt}/>
+                                <p>{d.name}</p>
+                                {d.subtitle && (
+                                    <p className={styles.secondaryText}>{d.subtitle}</p>
+                                )}
+                            </div>
+                        </Link>
                     ))}
                 </div>
             </section>
 
-            {/* Interests */}
             <section className={styles.interests} data-anim={"interests"}>
                 <div className={styles.heading}>
                     <h2 data-anim={"title"}>Interests</h2>

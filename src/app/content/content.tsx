@@ -11,7 +11,7 @@ export const NavItems: NavTab[] = [
 export const hero: Hero = {
     role: "SOFTWARE ENGINEER",
     name: "Nathan DELCAMBRE",
-    location: "Loire-Atlantique, France",
+    years: "3+ years of experience",
     ctaPrimary: "See my resume",
     ctaSecondary: "Contact me",
 };
@@ -122,9 +122,12 @@ export const formations: Formation[] = [
 ];
 
 export const diplomas: Diploma[] = [
-    { name: "Projet Voltaire", subtitle: "Business Level", imageSrc: "/images/certifications/projetVoltaire.png", imageAlt: "Projet Voltaire", tooltip: "French platform improving spelling and grammar through adaptive exercises and certification." },
-    { name: "TOEIC", subtitle: "945/990", imageSrc: "/images/certifications/toeic.png", imageAlt: "TOEIC", tooltip: "Standardized ETS test assessing workplace English listening and reading proficiency internationally." },
-    { name: "IELTS", subtitle: "7.0/9.0", imageSrc: "/images/certifications/ielts.png", imageAlt: "IELTS", tooltip: "International English test evaluating listening, reading, writing, speaking for study, migration."},
+    { name: "Projet Voltaire", subtitle: "Business Level", imageSrc: "/images/certifications/projetVoltaire.png", imageAlt: "Projet Voltaire", tooltip: "French platform improving spelling and grammar through adaptive exercises and certification.", link: "https://www.projet-voltaire.fr/"},
+    { name: "TOEIC", subtitle: "945/990", imageSrc: "/images/certifications/toeic.png", imageAlt: "TOEIC", tooltip: "Standardized ETS test assessing workplace English listening and reading proficiency internationally.", link: "https://www.etsglobal.org/fr/fr"},
+    { name: "IELTS", subtitle: "7.0/9.0", imageSrc: "/images/certifications/ielts.png", imageAlt: "IELTS", tooltip: "International English test evaluating listening, reading, writing, speaking for study, migration.", link: "https://ielts.org/"},
+    { name: "PSE1", subtitle: "First aid", imageSrc: "/images/certifications/pse1.png", imageAlt: "PSE1", tooltip: "Essential first aid training for those who want to acquire the skills needed to respond to emergencies as a team with first aid equipment.", link: "https://www.securite-nautique-atlantique.fr/page/formations/secourisme-nantes/pse1-premiers-secours-en-equipe-de-niveau-1.html"},
+    { name: "PSE2", subtitle: "First aid", imageSrc: "/images/certifications/pse1.png", imageAlt: "PSE2", tooltip: "PSE completed through leading responsibilities and team secourism with multiples victims.", link: "https://www.securite-nautique-atlantique.fr/page/formations/secourisme-nantes/pse2-premiers-secours-en-equipe-de-niveau-2.html"},
+    { name: "BNSSA", subtitle: "Lifesaving", imageSrc: "/images/certifications/bnssa.png", imageAlt: "BNSSA", tooltip: "French national certificate in water safety and rescue.", link: "https://www.securite-nautique-atlantique.fr/page/formations/sauvetage-nantes/bnssa-brevet-national-securite-sauvetage-aquatique.html"},
 ];
 
 export const interests: Interest[] = [
