@@ -70,3 +70,13 @@ export type HomeCard = {
     icon: LucideIcon;
     actions: CardAction[];
 };
+
+export type Project = {
+    id: string;
+    name: string;
+    description: string;
+    imageSrc: string;
+    siteUrl?: string;
+    repoUrl?: string;
+    tags: string[];
+};

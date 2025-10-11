@@ -1,4 +1,4 @@
-import type {NavTab, Hero, Experience, Formation, Diploma, Interest, Skill, HomeCard} from "./types";
+import type {NavTab, Hero, Experience, Formation, Diploma, Interest, Skill, HomeCard, Project} from "./types";
 import {ArrowUpRight, FolderGit2, Home, Mail, User} from "lucide-react";
 
 export const NavItems: NavTab[] = [
@@ -218,3 +218,47 @@ export const CARDS: HomeCard[] = [
         ],
     },
 ];
+
+export const PROJECTS: Project[] = [
+    {
+        id: "Surfy",
+        name: "Surfy",
+        description: "Web application to pin surf spots over a map, share session pics and launch drawing session with friends to debate about why you didnt land that air reverse.",
+        imageSrc: "/images/projects/surfy/surfy4.png",
+        repoUrl: "https://github.com/NathanDelcambre/Surfy",
+        tags: ["frontend", "nextjs", "web"],
+    },
+    {
+        id: "sna",
+        name: "Sécurité Nautique Atlantique",
+        description: "Website presenting the activities of the SNA, a rescue and first aid association since 1995. Integration and maintenance via a cms in JS, CSS, HTML.",
+        imageSrc: "/images/projects/sna/sna1.png",
+        siteUrl: "https://www.securite-nautique-atlantique.fr/",
+        tags: ["frontend", "web"],
+    },
+    {
+        id: "Cooking recipes",
+        name: "Recipes 2.0",
+        description: "Mobile application designed to make managing personal cooking recipes simple and enjoyable. Users can create new recipes, edit or delete existing ones, and quickly find what they want through intuitive filters.",
+        imageSrc: "/images/projects/recipes/recipes1.png",
+        repoUrl: "https://github.com/NathanDelcambre/RecipesInterface",
+        tags: ["frontend", "flutter", "mobile"],
+    },
+    {
+        id: "stage-infos",
+        name: "Stag'infos",
+        description: "StagInfos is a mobile and web platform designed to simplify internship management for both nursing students and supervisors. The mobile app helps students search, track, and organize their internships — from applications to daily progress.The web back office allows supervisors and administrators to monitor student activity, provide feedback, and ensure smooth communication throughout the internship period. Built with a modern tech stack, StagInfos bridges the gap between students, companies, and academic staff to make internships more transparent, structured, and effective.",
+        imageSrc: "/images/projects/staginfos/staginfos1.png",
+        repoUrl: "https://github.com/Staginfo-IMT",
+        tags: ["frontend", "mobile", "web"],
+    },
+    {
+        id: "portfolio-next",
+        name: "Personal Portfolio",
+        description: "A modern developer portfolio powered by Next.js App Router, enhanced with smooth Framer Motion animations, and hosted on Vercel.",
+        imageSrc: "/images/projects/portfolio/portfolio1.png",
+        repoUrl: "https://github.com/NathanDelcambre/portfolio",
+        tags: ["frontend", "nextjs", "web"],
+    }
+];
+

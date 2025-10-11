@@ -171,8 +171,8 @@ export default function AboutMePage() {
 
                 <div className={styles.diplomasGrid} data-anim={"diplomas"}>
                     {diplomas.map((d) => (
-                        <Link target="_blank" href={d.link}>
-                            <div className={styles.diploma} key={d.name} data-anim={"diploma"} title={d.tooltip}>
+                        <Link key={d.name} target="_blank" href={d.link}>
+                            <div className={styles.diploma} data-anim={"diploma"} title={d.tooltip}>
                                 <img className={styles.white} src={d.imageSrc} alt={d.imageAlt}/>
                                 <p>{d.name}</p>
                                 {d.subtitle && (
