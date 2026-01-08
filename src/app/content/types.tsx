@@ -79,4 +79,5 @@ export type Project = {
     siteUrl?: string;
     repoUrl?: string;
     tags: string[];
+    images?: string[];
 };

@@ -27,7 +27,7 @@ export default function NavBar() {
     }, [open]);
 
     return (
-        <div className={styles.header}>
+        <motion.div className={styles.header} layoutScroll>
             <Link href="/home" aria-label="Accueil">
                 <div className={styles.logo} />
             </Link>
@@ -90,7 +90,7 @@ export default function NavBar() {
                             >
                                 {isActive && (
                                     <motion.span
-                                        layoutId="nav-indicator"
+                                        layoutId="nav-indicator-mobile"
                                         className={styles.indicatorMobile}
                                         transition={{ type: "spring", stiffness: 500, damping: 40, mass: 0.5 }}
                                     />
@@ -102,6 +102,6 @@ export default function NavBar() {
                     })}
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }

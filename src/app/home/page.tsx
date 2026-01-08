@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import Link from "next/link";
 import { useAboutGsap } from "@/app/hooks/useGsap";
 import { CARDS } from "@/app/content/content";
+import Image from "next/image";
 
 export default function Home() {
     const scope = useAboutGsap();
@@ -13,6 +14,8 @@ export default function Home() {
             <main className={styles.main}>
                 <div className={styles.homeContent}>
                     <div className={styles.homeHeader}>
+                        <div className={styles.logo}>
+                        </div>
                         <p className={styles.subtitle}>
                           <span className={styles.typewriter} data-chars="56">
                             Hi, I’m <b className={styles.blue}>Nathan</b> — a french software engineer...

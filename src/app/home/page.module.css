@@ -5,8 +5,8 @@
   --halo-l: 70%;
   --halo-alpha: 0.95;
   --halo-thickness: 5px;
-  --halo-blur: 30px;
-  --halo-speed: 6s;
+  --halo-blur: 10px;
+  --halo-speed: 15s;
 }
 
 .homePage {
@@ -31,8 +31,8 @@
   background: linear-gradient(
           to bottom,
           var(--color-bg-blur-50) 5%,
-          var(--color-bg-blur-70) 35%,
           var(--color-bg-blur-70) 45%,
+          var(--color-bg-blur-70) 55%,
           var(--color-bg-blur-50) 100%
   );
   z-index: 1;
@@ -71,7 +71,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   padding: clamp(2rem, 4vw, 5rem) clamp(1rem, 6vw, 10rem);
   color: #fff;
   font-weight: 600;
@@ -83,8 +83,21 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 3rem;
+  gap: 1rem;
   z-index: 3;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  overflow: hidden;
+  background: center / cover no-repeat url("/images/gh_logo.png");
+  border: 5px solid var(--color-secondary);
+  box-shadow: 0 0 15px rgba(0, 165, 255, 0.5);
 }
 
 .homePage .subtitle {
@@ -151,8 +164,6 @@
   border-radius: var(--border-radius-small);
   border: 1px solid var(--color-card-border);
   background: var(--color-background-hard-blur);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 0 5px var(--color-secondary);
   color: var(--color-text-primary, #fff);
   transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease, background .18s ease;
@@ -160,7 +171,7 @@
   z-index: 0;
 }
 
-.card::before {
+.card:hover:before {
   content: "";
   position: absolute;
   inset: 0;
@@ -179,10 +190,10 @@
           linear-gradient(#000 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
+  animation: halo-rotate var(--halo-speed) linear infinite;
   filter: blur(var(--halo-blur));
   pointer-events: none;
   z-index: 2;
-  animation: halo-rotate var(--halo-speed) linear infinite;
   opacity: 0.9;
 }
 

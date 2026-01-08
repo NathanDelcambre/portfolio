@@ -166,7 +166,7 @@ export const skills: Skill[] = [
 export const CARDS: HomeCard[] = [
     {
         title: "About me",
-        tagline: "Learn about my path from surfer to developer",
+        tagline: "Learn about my path from surfing to developing apps that sometimes work",
         icon: User,
         actions: [
             {
@@ -223,15 +223,16 @@ export const PROJECTS: Project[] = [
     {
         id: "Surfy",
         name: "Surfy",
-        description: "Web application to pin surf spots over a map, share session pics and launch drawing session with friends to debate about why you didnt land that air reverse.",
+        description: "Web application to share session pics/spots and launch drawing session with friends to debate about why you didnt land that air reverse.",
         imageSrc: "/images/projects/surfy/surfy4.png",
         repoUrl: "https://github.com/NathanDelcambre/Surfy",
         tags: ["frontend", "nextjs", "web"],
+        images: ["/images/projects/surfy/surfy1.png", "/images/projects/surfy/surfy2.png", "/images/projects/surfy/surfy3.png"]
     },
     {
         id: "sna",
         name: "Sécurité Nautique Atlantique",
-        description: "Website presenting the activities of the SNA, a rescue and first aid association since 1995. Integration and maintenance via a cms in JS, CSS, HTML.",
+        description: "Website presenting the activities of the SNA, a rescue and first aid association since 1995. Integration with a cms in JS, CSS, HTML.",
         imageSrc: "/images/projects/sna/sna1.png",
         siteUrl: "https://www.securite-nautique-atlantique.fr/",
         tags: ["frontend", "web"],
@@ -239,7 +240,7 @@ export const PROJECTS: Project[] = [
     {
         id: "Cooking recipes",
         name: "Recipes 2.0",
-        description: "Mobile application designed to make managing personal cooking recipes simple and enjoyable. Users can create new recipes, edit or delete existing ones, and quickly find what they want through intuitive filters.",
+        description: "Mobile application designed to make managing personal cooking recipes simple and enjoyable. CRUD available.",
         imageSrc: "/images/projects/recipes/recipes1.png",
         repoUrl: "https://github.com/NathanDelcambre/RecipesInterface",
         tags: ["frontend", "flutter", "mobile"],
@@ -247,7 +248,7 @@ export const PROJECTS: Project[] = [
     {
         id: "stage-infos",
         name: "Stag'infos",
-        description: "StagInfos is a mobile and web platform designed to simplify internship management for both nursing students and supervisors. The mobile app helps students search, track, and organize their internships — from applications to daily progress.The web back office allows supervisors and administrators to monitor student activity, provide feedback, and ensure smooth communication throughout the internship period. Built with a modern tech stack, StagInfos bridges the gap between students, companies, and academic staff to make internships more transparent, structured, and effective.",
+        description: "StagInfos is a mobile and web platform designed to simplify internship management for both nursing students and supervisors.",
         imageSrc: "/images/projects/staginfos/staginfos1.png",
         repoUrl: "https://github.com/Staginfo-IMT",
         tags: ["frontend", "mobile", "web"],

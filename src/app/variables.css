@@ -30,15 +30,15 @@
     --color-star-secondary: #ffffff;
     --color-star-warm: #ffffff;
 
-    --color-bg-blur-50: rgba(80, 80, 80, 0);
-    --color-bg-blur-70: rgba(80, 80, 80, 0.5);
+    --color-bg-blur-50: rgba(80, 80, 80, 0.3);
+    --color-bg-blur-70: rgba(0, 0, 0, 0.5);
 
     /* Font sizes */
     --font-size-tiny: calc(8px + 0.4vw);
     --font-size-small: calc(10px + 0.4vw);
     --font-size-normal: calc(12px + 0.5vw);
     --font-size-large: calc(15px + 0.5vw);
-    --font-size-massive: calc(20px + 1.5vw);
+    --font-size-massive: calc(20px + 1.4vw);
     --font-size-huge: calc(30px + 2vw);
 
     /* Diplomas logo */
@@ -71,8 +71,8 @@
     --color-dropShadow: rgba(125,125,125, 0.4);
     --color-dropShadow-blue: #89dfff;
     --color-text-hovered: #ffffff;
-    --color-button-background: rgba(120, 220, 255, 0.3);
-    --color-button-hovered: rgba(120, 220, 255, 0.6);
+    --color-button-background: rgba(94, 195, 231, 0.6);
+    --color-button-hovered: rgba(120, 220, 255, 0.4);
     --color-card-border: #15274d;
     --color-button-border: rgba(255, 255, 255, 0);
     --color-input-border: rgba(255, 255, 255, 0.32);
