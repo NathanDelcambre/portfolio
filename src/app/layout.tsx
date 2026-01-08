@@ -28,7 +28,6 @@ export default function RootLayout({
       <html lang="en" className={outfit.className} suppressHydrationWarning={true}>
           <head>
               <Script src="/js/theme-init.js" strategy="beforeInteractive" />
-              <title></title>
           </head>
           <body>
               <Navigation/>
