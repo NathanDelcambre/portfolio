@@ -236,6 +236,7 @@ export const PROJECTS: Project[] = [
         imageSrc: "/images/projects/sna/sna1.png",
         siteUrl: "https://www.securite-nautique-atlantique.fr/",
         tags: ["frontend", "web"],
+        images: ["/images/projects/sna/sna2.png", "/images/projects/sna/sna3.png", "/images/projects/sna/sna4.png", "/images/projects/sna/sna5.png"]
     },
     {
         id: "Cooking recipes",
@@ -246,12 +247,20 @@ export const PROJECTS: Project[] = [
         tags: ["frontend", "flutter", "mobile"],
     },
     {
+        id: "VegaOne",
+        name: "VegaOne",
+        description: "Fullstack work on a real-time gaming platform for a confidential client, including UI architecture, performance optimization and crypto-wallet interactions.",
+        imageSrc: "/images/projects/vegaone/vegaone1.png",
+        tags: ["frontend", "vuejs", "nuxtjs", "web"]
+    },
+    {
         id: "stage-infos",
         name: "Stag'infos",
         description: "StagInfos is a mobile and web platform designed to simplify internship management for both nursing students and supervisors.",
         imageSrc: "/images/projects/staginfos/staginfos1.png",
         repoUrl: "https://github.com/Staginfo-IMT",
         tags: ["frontend", "mobile", "web"],
+        images: ["/images/projects/staginfos/staginfos2.png", "/images/projects/staginfos/staginfos3.png", "/images/projects/staginfos/staginfos4.png", "/images/projects/staginfos/staginfos5.png", "/images/projects/staginfos/staginfos6.png", "/images/projects/staginfos/staginfos7.png"]
     },
     {
         id: "portfolio-next",
@@ -260,6 +269,7 @@ export const PROJECTS: Project[] = [
         imageSrc: "/images/projects/portfolio/portfolio1.png",
         repoUrl: "https://github.com/NathanDelcambre/portfolio",
         tags: ["frontend", "nextjs", "web"],
+        images: ["/images/projects/portfolio/portfolio2.png", "/images/projects/portfolio/portfolio3.png", "/images/projects/portfolio/portfolio4.png"]
     }
 ];
 

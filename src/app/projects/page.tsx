@@ -13,6 +13,7 @@ const ALL_FILTERS = [
     { key: "nextjs", label: "NextJS" },
     { key: "angular", label: "Angular" },
     { key: "vuejs", label: "VueJS" },
+    { key: "nuxtjs", label: "Nuxt" },
     { key: "flutter", label: "Flutter" },
     { key: "web", label: "Web" },
     { key: "mobile", label: "Mobile" },
