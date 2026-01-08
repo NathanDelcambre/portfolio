@@ -126,23 +126,30 @@ export default function ContactPage() {
                             </div>
                         </div>
 
+                        <a
+                            href="https://www.linkedin.com/in/nathan-delcambre/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.coordsLink}
+                        >
                         <div className={styles.coordsItem}>
-                            <div className={styles.iconBox}>
-                                <Image src="/images/links/linkedIn.png" alt="linkedIn" width={64} height={64}
-                                       className={styles.icon}/>
-                            </div>
-                            <Link href="https://www.linkedin.com/in/nathan-delcambre/" target="_blank"
-                                  className={styles.coordsLink}>LinkedIn</Link>
+                        <div className={styles.iconBox}>
+                            <Image src="/images/links/linkedIn.png" alt="linkedIn" width={64} height={64} className={styles.icon} />
                         </div>
+                        LinkedIn
+                        </div>
+                        </a>
 
+                        <Link href="https://github.com/NathanDelcambre" target="_blank"
+                            className={styles.coordsLink}>
                         <div className={styles.coordsItem}>
                             <div className={styles.iconBox}>
                                 <Image src="/images/skills/github2.svg" alt="github" width={64} height={64}
-                                       className={styles.icon}/>
+                                    className={styles.icon}/>
                             </div>
-                            <Link href="https://github.com/NathanDelcambre" target="_blank"
-                                  className={styles.coordsLink}>GitHub</Link>
+                            GitHub
                         </div>
+                        </Link>
                     </div>
                 </section>
         </div>
