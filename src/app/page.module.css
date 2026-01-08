@@ -22,7 +22,7 @@
 }
 
 .rocketIcon {
-    color: var(--color-secondary);
+    color: var(--color-focus);
     animation: rocketLaunch 2s ease-in-out infinite;
     filter: drop-shadow(0 0 8px var(--color-secondary));
 }
@@ -53,13 +53,4 @@
 
 .text, .rocketIcon {
     text-shadow: 0 0 10px rgba(255, 255, 150, 0.4);
-}
-.footer {
-    padding: 2rem;
-    background: var(--color-background);
-    text-align: center;
-    font-size: 0.9rem;
-}
-.footerContent p{
-    color: var(--color-text-secondary)
 }

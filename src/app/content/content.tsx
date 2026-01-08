@@ -1,4 +1,4 @@
-import type {NavTab, Hero, Experience, Formation, Diploma, Interest, Skill, HomeCard} from "./types";
+import type {NavTab, Hero, Experience, Formation, Diploma, Interest, Skill, HomeCard, Project} from "./types";
 import {ArrowUpRight, FolderGit2, Home, Mail, User} from "lucide-react";
 
 export const NavItems: NavTab[] = [
@@ -11,7 +11,7 @@ export const NavItems: NavTab[] = [
 export const hero: Hero = {
     role: "SOFTWARE ENGINEER",
     name: "Nathan DELCAMBRE",
-    location: "Loire-Atlantique, France",
+    years: "3+ years of experience",
     ctaPrimary: "See my resume",
     ctaSecondary: "Contact me",
 };
@@ -122,9 +122,12 @@ export const formations: Formation[] = [
 ];
 
 export const diplomas: Diploma[] = [
-    { name: "Projet Voltaire", subtitle: "Business Level", imageSrc: "/images/certifications/projetVoltaire.png", imageAlt: "Projet Voltaire", tooltip: "French platform improving spelling and grammar through adaptive exercises and certification." },
-    { name: "TOEIC", subtitle: "945/990", imageSrc: "/images/certifications/toeic.png", imageAlt: "TOEIC", tooltip: "Standardized ETS test assessing workplace English listening and reading proficiency internationally." },
-    { name: "IELTS", subtitle: "7.0/9.0", imageSrc: "/images/certifications/ielts.png", imageAlt: "IELTS", tooltip: "International English test evaluating listening, reading, writing, speaking for study, migration."},
+    { name: "Projet Voltaire", subtitle: "Business Level", imageSrc: "/images/certifications/projetVoltaire.png", imageAlt: "Projet Voltaire", tooltip: "French platform improving spelling and grammar through adaptive exercises and certification.", link: "https://www.projet-voltaire.fr/"},
+    { name: "TOEIC", subtitle: "945/990", imageSrc: "/images/certifications/toeic.png", imageAlt: "TOEIC", tooltip: "Standardized ETS test assessing workplace English listening and reading proficiency internationally.", link: "https://www.etsglobal.org/fr/fr"},
+    { name: "IELTS", subtitle: "7.0/9.0", imageSrc: "/images/certifications/ielts.png", imageAlt: "IELTS", tooltip: "International English test evaluating listening, reading, writing, speaking for study, migration.", link: "https://ielts.org/"},
+    { name: "PSE1", subtitle: "First aid", imageSrc: "/images/certifications/pse1.png", imageAlt: "PSE1", tooltip: "Essential first aid training for those who want to acquire the skills needed to respond to emergencies as a team with first aid equipment.", link: "https://www.securite-nautique-atlantique.fr/page/formations/secourisme-nantes/pse1-premiers-secours-en-equipe-de-niveau-1.html"},
+    { name: "PSE2", subtitle: "First aid", imageSrc: "/images/certifications/pse1.png", imageAlt: "PSE2", tooltip: "PSE completed through leading responsibilities and team secourism with multiples victims.", link: "https://www.securite-nautique-atlantique.fr/page/formations/secourisme-nantes/pse2-premiers-secours-en-equipe-de-niveau-2.html"},
+    { name: "BNSSA", subtitle: "Lifesaving", imageSrc: "/images/certifications/bnssa.png", imageAlt: "BNSSA", tooltip: "French national certificate in water safety and rescue.", link: "https://www.securite-nautique-atlantique.fr/page/formations/sauvetage-nantes/bnssa-brevet-national-securite-sauvetage-aquatique.html"},
 ];
 
 export const interests: Interest[] = [
@@ -163,7 +166,7 @@ export const skills: Skill[] = [
 export const CARDS: HomeCard[] = [
     {
         title: "About me",
-        tagline: "Learn about my path from surfer to developer",
+        tagline: "Learn about my path from surfing to developing apps that sometimes work",
         icon: User,
         actions: [
             {
@@ -215,3 +218,48 @@ export const CARDS: HomeCard[] = [
         ],
     },
 ];
+
+export const PROJECTS: Project[] = [
+    {
+        id: "Surfy",
+        name: "Surfy",
+        description: "Web application to share session pics/spots and launch drawing session with friends to debate about why you didnt land that air reverse.",
+        imageSrc: "/images/projects/surfy/surfy4.png",
+        repoUrl: "https://github.com/NathanDelcambre/Surfy",
+        tags: ["frontend", "nextjs", "web"],
+        images: ["/images/projects/surfy/surfy1.png", "/images/projects/surfy/surfy2.png", "/images/projects/surfy/surfy3.png"]
+    },
+    {
+        id: "sna",
+        name: "Sécurité Nautique Atlantique",
+        description: "Website presenting the activities of the SNA, a rescue and first aid association since 1995. Integration with a cms in JS, CSS, HTML.",
+        imageSrc: "/images/projects/sna/sna1.png",
+        siteUrl: "https://www.securite-nautique-atlantique.fr/",
+        tags: ["frontend", "web"],
+    },
+    {
+        id: "Cooking recipes",
+        name: "Recipes 2.0",
+        description: "Mobile application designed to make managing personal cooking recipes simple and enjoyable. CRUD available.",
+        imageSrc: "/images/projects/recipes/recipes1.png",
+        repoUrl: "https://github.com/NathanDelcambre/RecipesInterface",
+        tags: ["frontend", "flutter", "mobile"],
+    },
+    {
+        id: "stage-infos",
+        name: "Stag'infos",
+        description: "StagInfos is a mobile and web platform designed to simplify internship management for both nursing students and supervisors.",
+        imageSrc: "/images/projects/staginfos/staginfos1.png",
+        repoUrl: "https://github.com/Staginfo-IMT",
+        tags: ["frontend", "mobile", "web"],
+    },
+    {
+        id: "portfolio-next",
+        name: "Personal Portfolio",
+        description: "A modern developer portfolio powered by Next.js App Router, enhanced with smooth Framer Motion animations, and hosted on Vercel.",
+        imageSrc: "/images/projects/portfolio/portfolio1.png",
+        repoUrl: "https://github.com/NathanDelcambre/portfolio",
+        tags: ["frontend", "nextjs", "web"],
+    }
+];
+

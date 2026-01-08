@@ -33,6 +33,7 @@ export type Diploma = {
     imageSrc: string;
     imageAlt: string;
     tooltip?: string;
+    link: string;
 };
 
 export type Interest = {
@@ -44,7 +45,7 @@ export type Interest = {
 export type Hero = {
     role: string;
     name: string;
-    location: string;
+    years: string;
     ctaPrimary: string;
     ctaSecondary: string;
 };
@@ -68,4 +69,15 @@ export type HomeCard = {
     tagline: string;
     icon: LucideIcon;
     actions: CardAction[];
+};
+
+export type Project = {
+    id: string;
+    name: string;
+    description: string;
+    imageSrc: string;
+    siteUrl?: string;
+    repoUrl?: string;
+    tags: string[];
+    images?: string[];
 };

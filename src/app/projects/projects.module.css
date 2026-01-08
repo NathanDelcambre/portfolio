@@ -1,0 +1,387 @@
+.projectsPage {
+    margin-top: 15vh;
+    margin-bottom: 5vw;
+}
+.header {
+    display: grid;
+    gap: 1rem;
+    margin-bottom: 3rem;
+}
+
+.title {
+    display: inline-block;
+    background: linear-gradient(to right, var(--color-secondary) 0%, var(--color-secondary-accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.filtersRow {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.75rem;
+}
+
+.chips {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    text-align: center;
+}
+
+.chip {
+    border: 1px solid var(--color-card-border);
+    background: color-mix(in srgb, var(--color-card-background) 92%, transparent);
+    color: var(--color-text-secondary);
+    padding: 8px 14px;
+    border-radius: 999px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    line-height: 1;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background-color .2s ease, transform .05s ease;
+}
+
+.chip:hover:not(.chipActive) {
+    border-color: var(--color-secondary);
+    color: var(--color-text-hovered);
+}
+
+.chip:active { transform: translateY(1px); }
+
+.chipActive {
+    background: var(--color-secondary-soft);
+    border-color: var(--color-secondary);
+    color: var(--color-focus);
+}
+
+.gridWrap {
+    margin-top: 1.25rem;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 1rem;
+}
+
+.card {
+    grid-column: span 12;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid var(--color-card-border);
+    background: var(--color-card-background);
+    border-radius: var(--large-border-radius);
+    overflow: clip;
+    box-shadow: 0 10px 30px -12px var(--color-dropShadow);
+    transition: transform .18s ease, box-shadow .25s ease, border-color .2s ease;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    border-color: var(--color-secondary);
+    box-shadow: 0 18px 38px -16px var(--color-dropShadow);
+}
+
+@media (min-width: 700px) {
+    .card { grid-column: span 6; }
+}
+@media (min-width: 1024px) {
+    .card { grid-column: span 4; }
+}
+
+.media {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    background: var(--color-primary-accent);
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    display: grid;
+    gap: 0.75rem;
+    padding: 1.5rem;
+}
+
+.cardTitle {
+    font-size: 1.05rem;
+    font-weight: 700;
+}
+
+.desc {
+    color: var(--color-text-secondary);
+    font-size: 0.95rem;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.seeMore {
+    color: var(--color-tertiary);
+    font-weight: 700;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+}
+
+.tag {
+    border: 1px solid var(--color-card-border);
+    background: transparent;
+    color: var(--color-text-secondary);
+    min-height: 32px;
+    max-height: 32px;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-weight: 600;
+    font-size: 0.7rem;
+    cursor: pointer;
+    transition: border-color .2s ease, color .2s ease, background-color .2s ease;
+}
+
+.actions {
+    margin-top: 0.25rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.btn, .btnGhost, .btnSoft {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+    padding: 10px 14px;
+    border-radius: var(--border-radius-small);
+    font-size: 0.9rem;
+    max-height: 40px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color .2s ease, border-color .2s ease, color .2s ease, transform .08s ease;
+}
+
+.btn:active, .btnGhost:active, .btnSoft:active { transform: translateY(1px); }
+
+.btn {
+    background: var(--color-button-background);
+    color: white;
+    border: 1px solid var(--color-button-border);
+}
+.btn:hover { background: var(--color-button-hovered); }
+
+.btnGhost {
+    background: transparent;
+    color: var(--color-focus);
+    border: 1px solid var(--color-card-border);
+}
+.btnGhost:hover {
+    border-color: var(--color-secondary);
+    background: var(--color-secondary-soft);
+    color: var(--color-focus);
+}
+
+.btnSoft {
+    background: var(--color-primary-accent);
+    color: var(--color-foreground);
+    border: 1px solid var(--color-card-border);
+}
+.btnSoft:hover {
+    background: color-mix(in srgb, var(--color-primary-accent) 70%, transparent);
+    border-color: var(--color-secondary);
+}
+
+.btnIcon {
+    width: 16px;
+    height: 16px;
+    flex: 0 0 auto;
+}
+
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 80;
+    display: grid;
+    place-items: center;
+}
+.backdrop {
+    position: absolute;
+    inset: 0;
+    background: color-mix(in srgb, var(--color-background) 50%, black);
+}
+
+.lightbox {
+    position: relative;
+    z-index: 81;
+    width: min(1200px, 94vw);
+    height: min(78vh, 760px);
+    display: grid;
+    grid-template-columns: 0.7fr 1.3fr;
+    gap: 1rem;
+}
+
+.cardCentered {
+    height: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    border: 1px solid var(--color-card-border);
+    background: var(--color-card-background);
+    border-radius: var(--large-border-radius);
+    overflow: clip;
+    box-shadow: 0 18px 38px -16px var(--color-dropShadow);
+}
+
+.actionsRowEnd {
+    display: flex;
+    gap: .5rem;
+    justify-content: flex-end;
+}
+
+.gallery {
+    position: relative;
+    height: 100%;
+    border: 1px solid var(--color-card-border);
+    background: var(--color-card-background);
+    border-radius: var(--large-border-radius);
+    padding: 0.75rem;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    gap: 0.5rem;
+}
+.close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 30px;
+    height: 30px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    border: 1px solid var(--color-card-border);
+    background: transparent;
+    cursor: pointer;
+    z-index: 2;
+}
+.close:hover { background: var(--color-secondary-soft); border-color: var(--color-secondary); }
+
+.galleryViewport {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.galleryStage {
+    position: relative;
+    height: 52vh;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.galleryImgWrap { width: 100%; display: grid; place-items: center; }
+.galleryImage {
+    width: 100%;
+    height: auto;
+    max-height: 50vh;
+    object-fit: contain;
+    border-radius: var(--border-radius-small);
+}
+
+.navLeft, .navRight {
+    width: 30px;
+    height: 30px;
+    border-radius: 999px;
+    border: 1px solid var(--color-card-border);
+    background: transparent;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+}
+.navLeft:hover, .navRight:hover { background: var(--color-secondary-soft); border-color: var(--color-secondary); }
+
+.thumbs {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: .5rem;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding: .25rem;
+    margin-left: 2rem;
+}
+.thumb {
+    border: 2px solid transparent;
+    padding: 0;
+    border-radius: var(--border-radius-small);
+    background: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.thumb.thumbActive {
+    transform: scale(1.1);
+}
+.thumb:not(.thumbActive) .thumbImg {
+    transform: scale(0.90);
+    opacity: 0.85;
+}
+.thumbImg {
+    display: block;
+    width: 120px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: calc(var(--border-radius-small) - 2px);
+}
+
+@media (max-width: 920px) {
+    .gallery { display: grid; }
+    .notMobile { display: none; }
+
+    .gallery * {
+        animation: none !important;
+        transition: none !important;
+    }
+    .card:hover,
+    .chip:active,
+    .btn:active,
+    .btnGhost:active,
+    .btnSoft:active,
+    .thumb.thumbActive {
+        transform: none !important;
+    }
+
+    .thumb:not(.thumbActive) .thumbImg,
+    .thumbImg {
+        transform: none !important;
+        opacity: 1 !important;
+    }
+
+    .navLeft:hover,
+    .navRight:hover,
+    .close:hover {
+        background: transparent !important;
+        border-color: var(--color-card-border) !important;
+    }
+
+    .galleryViewport {
+        grid-template-columns: 1fr;
+        gap: 0.75rem;
+    }
+    .galleryStage {
+        height: auto;
+    }
+    .galleryImage {
+        max-height: none;
+    }
+}

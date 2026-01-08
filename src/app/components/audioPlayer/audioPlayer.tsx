@@ -16,9 +16,11 @@ import {
 type Track = { title: string; src: string };
 
 const tracks: Track[] = [
-    { title: "I need an energy - Greg Holden", src: "/songs/song1.mp3" },
-    { title: "Hoist the colours", src: "/songs/song2.mp3" },
-    { title: "O'Kartier c'est la Hess", src: "/songs/song3.mp3" },
+    { title: "Burning Strings", src: "/songs/Burning Strings.mp3" },
+    { title: "Dust and Glory", src: "/songs/Dust and Glory.mp3" },
+    { title: "Majestic Reverie", src: "/songs/Majestic Reverie.mp3" },
+    { title: "Midnight Soliloquy", src: "/songs/Midnight Soliloquy.mp3" },
+    { title: "Under the Sunset Sky", src: "/songs/Under the Sunset Sky.mp3" }
 ];
 
 const setProgressFill = (el: HTMLInputElement, value: number, max: number) => {
