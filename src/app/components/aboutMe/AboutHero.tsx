@@ -22,13 +22,14 @@ export default function AboutHero() {
                     onMouseLeave={tilt.handleMouseLeave}
                 >
                     <Image
-                        src="/images/pp.jpg"
+                        src="/images/pp.webp"
                         alt={`Photo de ${hero.name}`}
-                        width={400}
-                        height={600}
-                        sizes="(max-width: 800px) 70vw, (max-width: 1100px) 40vw, 25vw"
+                        width={1200}
+                        height={2400}
+                        sizes="(max-width: 800px) 70vw, (max-width: 1100px) 45vw, 30vw"
                         className={styles.profileImg}
                         priority
+                        quality={100}
                     />
                 </div>
             </div>
